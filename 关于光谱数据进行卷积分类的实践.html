@@ -6,23 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>常用网络搭建方法 | HuZhennan</title>
+  <title>关于光谱数据进行卷积分类的实践 | HuZhennan</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <meta property="og:type" content="article">
-<meta property="og:title" content="常用网络搭建方法">
-<meta property="og:url" content="http://yoursite.com/%E5%B8%B8%E7%94%A8%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA%E6%96%B9%E6%B3%95.html">
+<meta property="og:title" content="关于光谱数据进行卷积分类的实践">
+<meta property="og:url" content="http://yoursite.com/%E5%85%B3%E4%BA%8E%E5%85%89%E8%B0%B1%E6%95%B0%E6%8D%AE%E8%BF%9B%E8%A1%8C%E5%8D%B7%E7%A7%AF%E5%88%86%E7%B1%BB%E7%9A%84%E5%AE%9E%E8%B7%B5.html">
 <meta property="og:site_name" content="HuZhennan">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://yoursite.com/常用网络搭建方法/封面.gif">
-<meta property="og:image" content="http://yoursite.com/常用网络搭建方法/组网.png">
-<meta property="article:published_time" content="2020-06-28T00:13:46.000Z">
-<meta property="article:modified_time" content="2020-06-28T00:34:24.000Z">
+<meta property="og:image" content="http://yoursite.com/关于光谱数据进行卷积分类的实践/封面.jpg">
+<meta property="og:image" content="http://yoursite.com/关于光谱数据进行卷积分类的实践/output_36_0.png">
+<meta property="og:image" content="http://yoursite.com/关于光谱数据进行卷积分类的实践/output_47_0.png">
+<meta property="article:published_time" content="2021-01-16T07:15:06.000Z">
+<meta property="article:modified_time" content="2021-01-16T07:32:52.620Z">
 <meta property="article:author" content="胡振楠">
 <meta property="article:tag" content="Python,Machine learning,Deep learning">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/常用网络搭建方法/封面.gif">
+<meta name="twitter:image" content="http://yoursite.com/关于光谱数据进行卷积分类的实践/封面.jpg">
   
     <link rel="alternative" href="/atom.xml" title="HuZhennan" type="application/atom+xml">
   
@@ -170,22 +171,22 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-常用网络搭建方法" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-关于光谱数据进行卷积分类的实践" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      常用网络搭建方法
+      关于光谱数据进行卷积分类的实践
     </h1>
   
 
 
   
   
-<a href="/%E5%B8%B8%E7%94%A8%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA%E6%96%B9%E6%B3%95.html" class="archive-article-date">
-        <time datetime="2020-06-28T00:13:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-28</time>
+<a href="/%E5%85%B3%E4%BA%8E%E5%85%89%E8%B0%B1%E6%95%B0%E6%8D%AE%E8%BF%9B%E8%A1%8C%E5%8D%B7%E7%A7%AF%E5%88%86%E7%B1%BB%E7%9A%84%E5%AE%9E%E8%B7%B5.html" class="archive-article-date">
+        <time datetime="2021-01-16T07:15:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-16</time>
 </a>
 
   
@@ -195,19 +196,214 @@
   <div class="article-entry" itemprop="articleBody">
     
     <div style="text-align: center">
-<img src="/常用网络搭建方法/封面.gif"/>
-</div>
-<a id="more"></a>
+<img src="/关于光谱数据进行卷积分类的实践/封面.jpg"/>
+</div><a id="more"></a>
 
-<hr>
-<p>生活与工作中都会遇到网络环境搭建的问题，索性将常见问题用图整理出来，如有错误，望包涵。</p>
+<h2 id="pandas使用文档"><a href="#pandas使用文档" class="headerlink" title="pandas使用文档"></a><a target="_blank" rel="noopener" href="https://www.pypandas.cn/docs/getting_started/10min.html#%E9%80%89%E6%8B%A9">pandas使用文档</a></h2><h2 id="pandas可视化"><a href="#pandas可视化" class="headerlink" title="pandas可视化"></a><a target="_blank" rel="noopener" href="https://pandas.pydata.org/pandas-docs/stable/user_guide/visualization.html#visualization">pandas可视化</a></h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#避免mac os 中可能碰见的意外，import 如下命令</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line">os.environ [<span class="string">&#x27;KMP_DUPLICATE_LIB_OK&#x27;</span>] =<span class="string">&#x27;true&#x27;</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 导入需要用到的包</span></span><br><span class="line"><span class="comment">#data analysis and wrangling</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> random <span class="keyword">as</span> rnd</span><br><span class="line"></span><br><span class="line"><span class="comment"># visualization</span></span><br><span class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">%matplotlib inline</span><br><span class="line"></span><br><span class="line"><span class="comment"># machine learning</span></span><br><span class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> LogisticRegression</span><br><span class="line"><span class="keyword">from</span> sklearn.svm <span class="keyword">import</span> SVC, LinearSVC</span><br><span class="line"><span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> RandomForestClassifier</span><br><span class="line"><span class="keyword">from</span> sklearn.neighbors <span class="keyword">import</span> KNeighborsClassifier</span><br><span class="line"><span class="keyword">from</span> sklearn.naive_bayes <span class="keyword">import</span> GaussianNB</span><br><span class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> Perceptron</span><br><span class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> SGDClassifier</span><br><span class="line"><span class="keyword">from</span> sklearn.tree <span class="keyword">import</span> DecisionTreeClassifier</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#导入数据</span></span><br><span class="line">df = pd.read_csv(<span class="string">&#x27;data.csv&#x27;</span>)</span><br><span class="line"><span class="comment">#test_df = pd.read_csv(&#x27;test.csv&#x27;)</span></span><br><span class="line"><span class="comment">#combine = [train_df, test_df]</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看数据形状</span></span><br><span class="line">df.shape</span><br></pre></td></tr></table></figure>
+
+<pre><code>(812, 300)</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看数据类型</span></span><br><span class="line">df.dtypes</span><br></pre></td></tr></table></figure>
+
+<pre><code>1      float64
+2      float64
+3      float64
+4      float64
+5      float64
+        ...   
+296    float64
+297    float64
+298    float64
+299    float64
+300    float64
+Length: 300, dtype: object</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.head()</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.tail()</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.index</span><br></pre></td></tr></table></figure>
+
+<pre><code>RangeIndex(start=0, stop=812, step=1)</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看数据统计摘要</span></span><br><span class="line">df.describe()</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 数据的转置</span></span><br><span class="line"><span class="comment">#df.T</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df[<span class="string">&#x27;1&#x27;</span>]</span><br></pre></td></tr></table></figure>
+
+<pre><code>0      0.506997
+1      0.506773
+2      0.516507
+3      0.512310
+4      0.510895
+         ...   
+807    1.099877
+808    1.103018
+809    1.120393
+810    1.120187
+811    1.100117
+Name: 1, Length: 812, dtype: float64</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 循环取出表中每列数据</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">300</span>):</span><br><span class="line">    print(df[str(i)])</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 用切片方式获取指定区间的行</span></span><br><span class="line">df[<span class="number">0</span>:<span class="number">5</span>]</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 用切片方式获取指定区间的行</span></span><br><span class="line"><span class="comment"># 如果想用切片方式获取指定列  将数据进行转置 然后进行切片</span></span><br><span class="line">df[<span class="number">0</span>:<span class="number">200</span>]</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 用整数列表按位置进行切片：</span></span><br><span class="line"><span class="comment"># iloc[行范围,列范围] </span></span><br><span class="line">df.iloc[<span class="number">0</span>:<span class="number">5</span>, <span class="number">0</span>:<span class="number">10</span>]</span><br><span class="line"><span class="comment"># 整行切</span></span><br><span class="line"><span class="comment">#df.iloc[0:5, :]</span></span><br><span class="line"><span class="comment"># 整列切</span></span><br><span class="line"><span class="comment">#df.iloc[:, 0:10]</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 按位置提取值 前行后列</span></span><br><span class="line">df.iloc[<span class="number">1</span>,<span class="number">1</span>]</span><br></pre></td></tr></table></figure>
+
+<pre><code>0.516965</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.index</span><br></pre></td></tr></table></figure>
+
+<pre><code>RangeIndex(start=0, stop=812, step=1)</code></pre>
+<h1 id="python-OpenCV-将数组转换成灰度图和彩图-链接"><a href="#python-OpenCV-将数组转换成灰度图和彩图-链接" class="headerlink" title="python-OpenCV 将数组转换成灰度图和彩图-链接"></a>python-OpenCV 将数组转换成灰度图和彩图-<a target="_blank" rel="noopener" href="https://blog.csdn.net/li_l_il/article/details/83214114">链接</a></h1><h3 id="光谱全波段共812-转换成29-29数组矩阵-每一纬数据需要841波段-在-csv文件中-814-842行对应位置补0"><a href="#光谱全波段共812-转换成29-29数组矩阵-每一纬数据需要841波段-在-csv文件中-814-842行对应位置补0" class="headerlink" title="光谱全波段共812 转换成29*29数组矩阵 每一纬数据需要841波段 在.csv文件中 814-842行对应位置补0"></a>光谱全波段共812 转换成29*29数组矩阵 每一纬数据需要841波段 在.csv文件中 814-842行对应位置补0</h3><ul>
+<li>过氧化苯甲酰-BPO</li>
+<li>抗坏血酸镁-C6H8O6</li>
+<li>偶氮甲酰胺-C2H4O2N4</li>
+<li>面粉-Flour</li>
+</ul>
+<p>需要转换成图片的.csv文件</p>
+<ul>
+<li>BPO_30.csv</li>
+<li>C6H8O6_30.csv</li>
+<li>C2H4O2N4_30.csv</li>
+<li>BHT_30.csv</li>
+<li>Flour.csv</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="comment">#导入数据</span></span><br><span class="line">original_path = <span class="string">&quot;data/&quot;</span></span><br><span class="line">csvfile = <span class="string">&quot;Flour.csv&quot;</span></span><br><span class="line">df = pd.read_csv(original_path+csvfile)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os </span><br><span class="line"><span class="keyword">import</span> cv2 <span class="keyword">as</span> cv</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ndf = np.array(df)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 数组形状</span></span><br><span class="line">ndf.shape</span><br></pre></td></tr></table></figure>
+
+<pre><code>(841, 300)</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 数组行数</span></span><br><span class="line">ndf.shape[<span class="number">0</span>]</span><br></pre></td></tr></table></figure>
+
+<pre><code>841</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 数组列数</span></span><br><span class="line">ndf.shape[<span class="number">1</span>]</span><br></pre></td></tr></table></figure>
+
+<pre><code>300</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">n = ndf.shape[<span class="number">1</span>]</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 存储路径</span></span><br><span class="line"><span class="comment"># 获取文件名 不含后缀名</span></span><br><span class="line">classes = csvfile.split(<span class="string">&#x27;.&#x27;</span>)[<span class="number">0</span>]</span><br><span class="line">save_path = <span class="string">&quot;data/&quot;</span>+classes+<span class="string">&quot;/&quot;</span></span><br><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(save_path):</span><br><span class="line">    os.mkdir(save_path)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">classes</span><br></pre></td></tr></table></figure>
+
+<pre><code>&#39;Flour&#39;</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">save_path</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 提取某列  ndf[:,0]提取第0列，ndf[0,:]为提取第0行  循环提取可使用变量i 和for 循环  由于像素太小将数据扩大100背</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(n):</span><br><span class="line">    x = ndf[:,i]*<span class="number">170</span>   <span class="comment"># 像素值扩大170倍  扩大倍数后最大不超过255（像素最大值）</span></span><br><span class="line">    x_gray = x.reshape(<span class="number">29</span>,<span class="number">29</span>)</span><br><span class="line">    filename = classes+str(<span class="string">&quot;_&quot;</span>) + str(i) +<span class="string">&#x27;.jpg&#x27;</span></span><br><span class="line">    print(filename)</span><br><span class="line">    cv.imwrite( save_path+filename, x_gray)</span><br></pre></td></tr></table></figure>
+
+<h1 id="pandas可视化-1"><a href="#pandas可视化-1" class="headerlink" title="pandas可视化"></a>pandas可视化</h1><p>需要转换成图片的.csv文件</p>
+<ul>
+<li>BPO_30.csv</li>
+<li>C6H8O6_30.csv</li>
+<li>C2H4O2N4_30.csv</li>
+<li>BHT_30.csv</li>
+<li>Flour.csv</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">plt.close(<span class="string">&quot;all&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ts = pd.Series(np.random.randn(<span class="number">1000</span>), index=pd.date_range(<span class="string">&quot;1/1/2000&quot;</span>, periods=<span class="number">1000</span>))</span><br><span class="line">ts = ts.cumsum()</span><br><span class="line">ts.plot();</span><br></pre></td></tr></table></figure>
+
 <div style="text-align: center">
-<img src="/常用网络搭建方法/组网.png"/>
-</div>
-注：作图不易，使用请注明出处。
+<img src="/关于光谱数据进行卷积分类的实践/output_36_0.png"/>
+</div>    
 
-<hr>
-<p>参考见：<br><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=PsqzrkDInbw&list=WL&index=47&t=0s">迈克教你组建局域网络</a><br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/65226634">一文搞懂网络知识，IP、子网掩码、网关、DNS、端口号</a><br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/preorder69/p/3916216.html">路由器WAN口和LAN口详解</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## 画光谱图</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#导入数据</span></span><br><span class="line">df = pd.read_csv(<span class="string">&#x27;data/Flour.csv&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将pandas转换成numpy数组</span></span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt </span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">%matplotlib inline</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ndf = np.array(df)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ndf.shape</span><br></pre></td></tr></table></figure>
+
+<pre><code>(841, 300)</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 变换[行数或者行范围数][列数或者列范围数]</span></span><br><span class="line">ndf[<span class="number">0</span>:<span class="number">5</span>][<span class="number">0</span>]</span><br></pre></td></tr></table></figure>
+
+<pre><code>array([0.527456, 0.539068, 0.533817, 0.536856, 0.531357, 0.532443,
+       0.530681, 0.534781, 0.534924, 0.541088, 0.535893, 0.551059,
+       0.542047, 0.531829, 0.54873 , 0.558759, 0.54855 , 0.542629,
+       0.538553, 0.542783, 0.552286, 0.551863, 0.543334, 0.552377,
+       0.543938, 0.547122, 0.540725, 0.531854, 0.554798, 0.549606,
+       0.542552, 0.540312, 0.547871, 0.528074, 0.535565, 0.541374,
+       0.533127, 0.526128, 0.536771, 0.550181, 0.538426, 0.53296 ,
+       0.538549, 0.546393, 0.554594, 0.553422, 0.542221, 0.543933,
+       0.542188, 0.549788, 0.544343, 0.5542  , 0.554243, 0.53858 ,
+       0.540989, 0.546357, 0.543268, 0.539397, 0.54416 , 0.539685,
+       0.531914, 0.526139, 0.526062, 0.504722, 0.527921, 0.546416,
+       0.524401, 0.520719, 0.520421, 0.519205, 0.513356, 0.517203,
+       0.537914, 0.532853, 0.529457, 0.535849, 0.526027, 0.53574 ,
+       0.522688, 0.531917, 0.521912, 0.519958, 0.533829, 0.532983,
+       0.519357, 0.527696, 0.531077, 0.527097, 0.528332, 0.531461,
+       0.526882, 0.521233, 0.529405, 0.522091, 0.533765, 0.516921,
+       0.536115, 0.529478, 0.527306, 0.516354, 0.52926 , 0.529066,
+       0.536535, 0.531878, 0.527499, 0.53392 , 0.538348, 0.534328,
+       0.538417, 0.522842, 0.537219, 0.536657, 0.530291, 0.536438,
+       0.536411, 0.536294, 0.533942, 0.545962, 0.557513, 0.544296,
+       0.536482, 0.537505, 0.545248, 0.532656, 0.522586, 0.54245 ,
+       0.549348, 0.541217, 0.536225, 0.531002, 0.52481 , 0.531673,
+       0.540863, 0.543009, 0.542437, 0.535241, 0.534831, 0.538701,
+       0.540119, 0.544251, 0.541384, 0.541622, 0.544215, 0.540498,
+       0.542264, 0.557241, 0.547741, 0.54643 , 0.540776, 0.5403  ,
+       0.538522, 0.541828, 0.547735, 0.540076, 0.540701, 0.535433,
+       0.538577, 0.547106, 0.549156, 0.552224, 0.547681, 0.559497,
+       0.548481, 0.543931, 0.549899, 0.539773, 0.541725, 0.545286,
+       0.553301, 0.555259, 0.549853, 0.542584, 0.559975, 0.539262,
+       0.54583 , 0.542396, 0.549034, 0.532758, 0.533235, 0.538564,
+       0.535637, 0.535434, 0.539513, 0.544524, 0.543618, 0.542523,
+       0.541816, 0.544487, 0.551832, 0.543922, 0.546927, 0.543818,
+       0.54782 , 0.557557, 0.545532, 0.537293, 0.536116, 0.540972,
+       0.549887, 0.542628, 0.531401, 0.546989, 0.538245, 0.524734,
+       0.530751, 0.534843, 0.538766, 0.545307, 0.543244, 0.54367 ,
+       0.537243, 0.526206, 0.539417, 0.539699, 0.531178, 0.541235,
+       0.544556, 0.540934, 0.535658, 0.542719, 0.547691, 0.550743,
+       0.551205, 0.543676, 0.543612, 0.539587, 0.539375, 0.534939,
+       0.529537, 0.535305, 0.546495, 0.550124, 0.532919, 0.527631,
+       0.532127, 0.542186, 0.538549, 0.530563, 0.544211, 0.542594,
+       0.538879, 0.544136, 0.544776, 0.55042 , 0.553001, 0.550743,
+       0.545322, 0.546394, 0.5444  , 0.54379 , 0.544237, 0.545007,
+       0.537094, 0.53133 , 0.533948, 0.532881, 0.534225, 0.543696,
+       0.542891, 0.538619, 0.539549, 0.538642, 0.541133, 0.548425,
+       0.550093, 0.551402, 0.549404, 0.550817, 0.552938, 0.539978,
+       0.549038, 0.54803 , 0.540222, 0.541832, 0.539832, 0.559839,
+       0.553371, 0.552928, 0.556103, 0.558435, 0.553091, 0.544731,
+       0.544625, 0.550861, 0.554777, 0.554223, 0.54263 , 0.536897,
+       0.533313, 0.536198, 0.545072, 0.538127, 0.535543, 0.543002,
+       0.551259, 0.54978 , 0.549759, 0.550223, 0.549778, 0.544962])</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 生成索引 即 生成横坐标 </span></span><br><span class="line">x = np.linspace(<span class="number">0</span>, <span class="number">812</span>, num=<span class="number">841</span>,dtype=int) </span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x.shape</span><br></pre></td></tr></table></figure>
+
+<pre><code>(841,)</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = np.reshape(x,(<span class="number">841</span>,<span class="number">1</span>))</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a.shape</span><br></pre></td></tr></table></figure>
+
+<pre><code>(841, 1)</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 光谱画图例程</span></span><br><span class="line">fig, ax = plt.subplots()  <span class="comment"># Create a figure containing a single axes.</span></span><br><span class="line">ax.plot(a,ndf) </span><br><span class="line">ax.figure.savefig(<span class="string">&#x27;dongyuan/Flour.png&#x27;</span>,dpi=<span class="number">2000</span>,bbox_inches = <span class="string">&#x27;tight&#x27;</span>) <span class="comment">#用来保存图片</span></span><br></pre></td></tr></table></figure>
+
+<div style="text-align: center">
+<img src="/关于光谱数据进行卷积分类的实践/output_47_0.png"/>
+</div>     
+
+<h2 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h2><p>通过将一维数据转换为高维数据进行剧卷积，实际上是一种新的特征提取方法，光谱的每个波段在转换为像素图后表示一个像素，不同波段的组合代表意义不同，通过卷积池化可以进行特征提取，然后结合分类器进行分类。此种思路可在其他问题加以应用。</p>
 
     
 
@@ -301,7 +497,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/%E5%B8%B8%E7%94%A8%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA%E6%96%B9%E6%B3%95.html" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/%E5%85%B3%E4%BA%8E%E5%85%89%E8%B0%B1%E6%95%B0%E6%8D%AE%E8%BF%9B%E8%A1%8C%E5%8D%B7%E7%A7%AF%E5%88%86%E7%B1%BB%E7%9A%84%E5%AE%9E%E8%B7%B5.html" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -316,18 +512,18 @@
 
 <nav id="article-nav">
   
-    <a href="/%E7%A8%8B%E5%BA%8F%E4%B8%AD%E5%90%84%E7%A7%8Dbug%E6%B1%87%E6%80%BB-%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0.html" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/%E6%8F%90%E5%8F%96%E8%A7%86%E9%A2%91%E5%85%89%E6%B5%81%E6%95%B0%E6%8D%AE.html" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          程序中各种bug汇总-持续更新
+          提取视频光流数据
         
       </div>
     </a>
   
   
-    <a href="/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-KNN.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">机器学习-KNN</div>
+    <a href="/%E4%BA%BA%E7%B1%BB%E8%A1%8C%E4%B8%BA%E8%A7%86%E9%A2%91%E5%88%86%E7%B1%BB%EF%BC%88T3D%EF%BC%89.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">人类行为视频分类（T3D）</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -354,7 +550,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#pandas%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3"><span class="toc-number">1.</span> <span class="toc-text">pandas使用文档</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pandas%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="toc-number">2.</span> <span class="toc-text">pandas可视化</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#python-OpenCV-%E5%B0%86%E6%95%B0%E7%BB%84%E8%BD%AC%E6%8D%A2%E6%88%90%E7%81%B0%E5%BA%A6%E5%9B%BE%E5%92%8C%E5%BD%A9%E5%9B%BE-%E9%93%BE%E6%8E%A5"><span class="toc-number"></span> <span class="toc-text">python-OpenCV 将数组转换成灰度图和彩图-链接</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%89%E8%B0%B1%E5%85%A8%E6%B3%A2%E6%AE%B5%E5%85%B1812-%E8%BD%AC%E6%8D%A2%E6%88%9029-29%E6%95%B0%E7%BB%84%E7%9F%A9%E9%98%B5-%E6%AF%8F%E4%B8%80%E7%BA%AC%E6%95%B0%E6%8D%AE%E9%9C%80%E8%A6%81841%E6%B3%A2%E6%AE%B5-%E5%9C%A8-csv%E6%96%87%E4%BB%B6%E4%B8%AD-814-842%E8%A1%8C%E5%AF%B9%E5%BA%94%E4%BD%8D%E7%BD%AE%E8%A1%A50"><span class="toc-number">0.1.</span> <span class="toc-text">光谱全波段共812 转换成29*29数组矩阵 每一纬数据需要841波段 在.csv文件中 814-842行对应位置补0</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#pandas%E5%8F%AF%E8%A7%86%E5%8C%96-1"><span class="toc-number"></span> <span class="toc-text">pandas可视化</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E6%9D%9F%E8%AF%AD"><span class="toc-number">1.</span> <span class="toc-text">结束语</span></a></li></ol>
                     </div>
                 </span>
             </div>
