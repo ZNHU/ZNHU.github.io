@@ -6,23 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>提取视频光流数据 | HuZhennan</title>
+  <title>Archives: 2020/6 | HuZhennan</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="article">
-<meta property="og:title" content="提取视频光流数据">
-<meta property="og:url" content="http://yoursite.com/%E6%8F%90%E5%8F%96%E8%A7%86%E9%A2%91%E5%85%89%E6%B5%81%E6%95%B0%E6%8D%AE.html">
+  <meta name="description" content="胡振楠的博客">
+<meta property="og:type" content="website">
+<meta property="og:title" content="HuZhennan">
+<meta property="og:url" content="http://yoursite.com/archives/2020/06/index.html">
 <meta property="og:site_name" content="HuZhennan">
+<meta property="og:description" content="胡振楠的博客">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://yoursite.com/提取视频光流数据/封面.png">
-<meta property="og:image" content="http://yoursite.com/提取视频光流数据/001test.gif">
-<meta property="article:published_time" content="2021-01-27T10:11:32.000Z">
-<meta property="article:modified_time" content="2021-01-27T10:23:01.508Z">
 <meta property="article:author" content="胡振楠">
 <meta property="article:tag" content="Python,Machine learning,Deep learning">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/提取视频光流数据/封面.png">
   
     <link rel="alternative" href="/atom.xml" title="HuZhennan" type="application/atom+xml">
   
@@ -170,516 +167,54 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-提取视频光流数据" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
+            
+  
+  
     
-      <header class="article-header">
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	
+<a href="/%E6%89%8B%E6%92%95BP%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C.html" class="archive-article-date">
+        <time datetime="2020-06-06T08:28:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-06</time>
+</a>
+
+        </div>
+    	 
   
+    <h1 itemprop="name">
+	
+	  <a class="archive-article-title" href="/%E6%89%8B%E6%92%95BP%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C.html" target="_blank">手撕BP神经网络</a>
   
-    <h1 class="article-title" itemprop="name">
-      提取视频光流数据
     </h1>
   
 
 
-  
-  
-<a href="/%E6%8F%90%E5%8F%96%E8%A7%86%E9%A2%91%E5%85%89%E6%B5%81%E6%95%B0%E6%8D%AE.html" class="archive-article-date">
-        <time datetime="2021-01-27T10:11:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-27</time>
-</a>
+        <div class="article-info info-on-right">
+          
+          
 
-  
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <div style="text-align: center">
-<img src="/提取视频光流数据/封面.png"/>
-</div>
-<a id="more"></a>
-
-<p><strong>深度学习中训练数据所包含的信息一定程度上决定了最终的模型性能，多尺度特征融合和多类型信息融合方式不断出现，在3D卷积神经网络中使用光流信息融合RGB数据，在性能上带来提升，以下为视频数据提取光流的方式</strong></p>
-<ul>
-<li>删除当前目录下所有的.DS_Store文件<br>find ./ -name “.DS_Store” -depth -exec rm {} ;<h3 id="1-视频提取数据帧"><a href="#1-视频提取数据帧" class="headerlink" title="1. 视频提取数据帧"></a>1. 视频提取数据帧</h3></li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> os</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">videoname = <span class="string">&#x27;001.mp4&#x27;</span></span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">path = videoname.split(<span class="string">&#x27;.&#x27;</span>)[<span class="number">0</span>]</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">cap = cv2.VideoCapture(videoname) <span class="comment">#创建一个视频获取对象</span></span><br><span class="line">flag = <span class="number">0</span>  <span class="comment">#用于指定帧的序号</span></span><br><span class="line">fr=<span class="number">1</span></span><br><span class="line">time=<span class="number">0</span>    <span class="comment">#用于指定帧的时长</span></span><br><span class="line"><span class="keyword">while</span> (cap.isOpened()):</span><br><span class="line">    cap.set(cv2.CAP_PROP_POS_MSEC,time)</span><br><span class="line">    </span><br><span class="line">    <span class="comment">#cap.set(cv2.CAP_PROP_POS_FRAMES,flag) #设置帧数标记</span></span><br><span class="line">    ret,im = cap.read()<span class="comment">#获取图像</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> ret:  <span class="comment">#如果获取失败，则结束</span></span><br><span class="line">        print(<span class="string">&quot;exit&quot;</span>)</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(path):</span><br><span class="line">        os.makedirs(path)</span><br><span class="line">    <span class="comment">#cv2.waitKey(2000)#延时</span></span><br><span class="line">    <span class="comment">#cv2.imshow(&#x27;a&#x27;,im)#显示图像，用在循环中可以播放视频</span></span><br><span class="line">    cv2.imwrite(path+<span class="string">&#x27;/&#123;0:05d&#125;.jpg&#x27;</span>.format(fr),im)<span class="comment">#保存图片</span></span><br><span class="line">    time+=<span class="number">50</span>  <span class="comment">#设置每隔50ms读取帧</span></span><br><span class="line">    <span class="comment">#flag+=10  #每隔10帧读取一帧</span></span><br><span class="line">    fr+=<span class="number">1</span></span><br></pre></td></tr></table></figure>
-
-<pre><code>exit</code></pre>
-<h3 id="2-通过连续帧提取TVL1光流"><a href="#2-通过连续帧提取TVL1光流" class="headerlink" title="2. 通过连续帧提取TVL1光流"></a>2. 通过连续帧提取TVL1光流</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> glob <span class="keyword">import</span> glob</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">cal_for_frames</span>(<span class="params">video_path</span>):</span></span><br><span class="line">    frames = glob(os.path.join(video_path, <span class="string">&#x27;*.jpg&#x27;</span>))</span><br><span class="line">    frames.sort()</span><br><span class="line"> </span><br><span class="line">    flow = []</span><br><span class="line">    prev = cv2.imread(frames[<span class="number">0</span>])</span><br><span class="line">    prev = cv2.cvtColor(prev, cv2.COLOR_BGR2GRAY)</span><br><span class="line">    <span class="keyword">for</span> i, frame_curr <span class="keyword">in</span> enumerate(frames[<span class="number">1</span>:]):</span><br><span class="line">        curr = cv2.imread(frame_curr)</span><br><span class="line">        curr = cv2.cvtColor(curr, cv2.COLOR_BGR2GRAY)</span><br><span class="line">        tmp_flow = compute_TVL1(prev, curr)</span><br><span class="line">        flow.append(tmp_flow)</span><br><span class="line">        prev = curr</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">return</span> flow</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">compute_TVL1</span>(<span class="params">prev, curr, bound=<span class="number">15</span></span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;Compute the TV-L1 optical flow.&quot;&quot;&quot;</span></span><br><span class="line">    TVL1=cv2.optflow.DualTVL1OpticalFlow_create()</span><br><span class="line">    <span class="comment"># TVL1 = cv2.DualTVL1OpticalFlow_create()</span></span><br><span class="line">    <span class="comment"># TVL1=cv2.createOptFlow_DualTVL1()</span></span><br><span class="line">    flow = TVL1.calc(prev, curr, <span class="literal">None</span>)</span><br><span class="line">    <span class="keyword">assert</span> flow.dtype == np.float32</span><br><span class="line"> </span><br><span class="line">    flow = (flow + bound) * (<span class="number">255.0</span> / (<span class="number">2</span> * bound))</span><br><span class="line">    flow = np.round(flow).astype(int)</span><br><span class="line">    flow[flow &gt;= <span class="number">255</span>] = <span class="number">255</span></span><br><span class="line">    flow[flow &lt;= <span class="number">0</span>] = <span class="number">0</span></span><br><span class="line"> </span><br><span class="line">    <span class="keyword">return</span> flow</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">save_flow</span>(<span class="params">video_flows, flow_path</span>):</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(os.path.join(flow_path, <span class="string">&#x27;u&#x27;</span>)):</span><br><span class="line">        os.mkdir(os.path.join(flow_path, <span class="string">&#x27;u&#x27;</span>))</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(os.path.join(flow_path, <span class="string">&#x27;v&#x27;</span>)):</span><br><span class="line">        os.mkdir(os.path.join(flow_path, <span class="string">&#x27;v&#x27;</span>))</span><br><span class="line">    <span class="keyword">for</span> i, flow <span class="keyword">in</span> enumerate(video_flows):</span><br><span class="line">        cv2.imwrite(os.path.join(flow_path,<span class="string">&#x27;u&#x27;</span>, <span class="string">&quot;&#123;:06d&#125;.jpg&quot;</span>.format(i)),</span><br><span class="line">                    flow[:, :, <span class="number">0</span>])</span><br><span class="line">        cv2.imwrite(os.path.join(flow_path,<span class="string">&#x27;v&#x27;</span>, <span class="string">&quot;&#123;:06d&#125;.jpg&quot;</span>.format(i)),</span><br><span class="line">                    flow[:, :, <span class="number">1</span>])</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">extract_flow</span>(<span class="params">video_path, flow_path</span>):</span></span><br><span class="line">    flow = cal_for_frames(video_path)</span><br><span class="line">    save_flow(flow, flow_path)</span><br><span class="line">    print(<span class="string">&#x27;complete:&#x27;</span> + flow_path)</span><br><span class="line">    <span class="keyword">return</span></span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">video_path = path+<span class="string">&#x27;/&#x27;</span>  <span class="comment">#保存帧的路径</span></span><br><span class="line">save_path = path+<span class="string">&#x27;flow/&#x27;</span></span><br><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(save_path):</span><br><span class="line">    os.makedirs(save_path)</span><br><span class="line">extract_flow(video_path,save_path)</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-可视化光流"><a href="#3-可视化光流" class="headerlink" title="3.可视化光流"></a>3.可视化光流</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2 <span class="keyword">as</span> cv</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> os</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#path = &#x27;test_videos/001&#x27;</span></span><br><span class="line">path = <span class="string">&#x27;test_videos/&#x27;</span></span><br><span class="line">videos = os.listdir(path)</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">TVL1 = cv.optflow.DualTVL1OpticalFlow_create()</span><br><span class="line"><span class="keyword">for</span> video <span class="keyword">in</span> videos:</span><br><span class="line">    video_path = path + <span class="string">&#x27;/&#x27;</span> + video</span><br><span class="line">    cap = cv.VideoCapture(video_path)</span><br><span class="line">    ret, frame1 = cap.read()</span><br><span class="line">    prvs = cv.cvtColor(frame1,cv.COLOR_BGR2GRAY)</span><br><span class="line">    hsv = np.zeros_like(frame1)</span><br><span class="line">    hsv[...,<span class="number">1</span>] = <span class="number">255</span></span><br><span class="line">    count = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span>(<span class="literal">True</span>):</span><br><span class="line">        ret, frame2 = cap.read()</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> ret:</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        next = cv.cvtColor(frame2,cv.COLOR_BGR2GRAY)</span><br><span class="line"> </span><br><span class="line">        <span class="comment"># 返回一个两通道的光流向量，实际上是每个点的像素位移值</span></span><br><span class="line">        flow = TVL1.calc(prvs,next, <span class="literal">None</span>)</span><br><span class="line"> </span><br><span class="line">        <span class="comment"># 笛卡尔坐标转换为极坐标，获得极轴和极角</span></span><br><span class="line">        mag, ang = cv.cartToPolar(flow[...,<span class="number">0</span>], flow[...,<span class="number">1</span>])</span><br><span class="line"> </span><br><span class="line">        hsv[...,<span class="number">0</span>] = ang*<span class="number">180</span>/np.pi/<span class="number">2</span>  <span class="comment">#角度</span></span><br><span class="line">        hsv[...,<span class="number">2</span>] = cv.normalize(mag,<span class="literal">None</span>,<span class="number">0</span>,<span class="number">255</span>,cv.NORM_MINMAX)</span><br><span class="line">        bgr = cv.cvtColor(hsv,cv.COLOR_HSV2BGR)</span><br><span class="line">        path_ = path + <span class="string">&#x27;/&#x27;</span> + os.path.basename(video).split(<span class="string">&#x27;.&#x27;</span>)[<span class="number">0</span>]</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(path_):</span><br><span class="line">            os.makedirs(path_)</span><br><span class="line">        cv.imwrite(path_ + <span class="string">&quot;/frame&#123;0:06d&#125;.jpg&quot;</span>.format(count), bgr)</span><br><span class="line">        count += <span class="number">1</span></span><br><span class="line">        prvs = next</span><br><span class="line">    cap.release()</span><br><span class="line">    cv.destroyAllWindows()</span><br></pre></td></tr></table></figure>
-
-<h3 id="4-制作视频"><a href="#4-制作视频" class="headerlink" title="4.制作视频"></a>4.制作视频</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> cv2</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#picpath= &#x27;test_videos/001/001_009_001/&#x27;  # 图片路径</span></span><br><span class="line">picpath= <span class="string">&#x27;test_videos/001_009_001/&#x27;</span>  <span class="comment"># 图片路径</span></span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">img = os.listdir(picpath)</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">img_paths = []</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> path <span class="keyword">in</span> img:</span><br><span class="line">    i = picpath+path</span><br><span class="line">    img_paths.append(i)</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">img_paths</span><br></pre></td></tr></table></figure>
-
-<pre><code>[&#39;test_videos/001_009_001/frame000008.jpg&#39;,
- &#39;test_videos/001_009_001/frame000034.jpg&#39;,
- &#39;test_videos/001_009_001/frame000020.jpg&#39;,
- &#39;test_videos/001_009_001/frame000021.jpg&#39;,
- &#39;test_videos/001_009_001/frame000035.jpg&#39;,
- &#39;test_videos/001_009_001/frame000009.jpg&#39;,
- &#39;test_videos/001_009_001/frame000023.jpg&#39;,
- &#39;test_videos/001_009_001/frame000037.jpg&#39;,
- &#39;test_videos/001_009_001/frame000036.jpg&#39;,
- &#39;test_videos/001_009_001/frame000022.jpg&#39;,
- &#39;test_videos/001_009_001/frame000026.jpg&#39;,
- &#39;test_videos/001_009_001/frame000032.jpg&#39;,
- &#39;test_videos/001_009_001/frame000033.jpg&#39;,
- &#39;test_videos/001_009_001/frame000027.jpg&#39;,
- &#39;test_videos/001_009_001/frame000031.jpg&#39;,
- &#39;test_videos/001_009_001/frame000025.jpg&#39;,
- &#39;test_videos/001_009_001/frame000019.jpg&#39;,
- &#39;test_videos/001_009_001/frame000018.jpg&#39;,
- &#39;test_videos/001_009_001/frame000024.jpg&#39;,
- &#39;test_videos/001_009_001/frame000030.jpg&#39;,
- &#39;test_videos/001_009_001/frame000057.jpg&#39;,
- &#39;test_videos/001_009_001/frame000043.jpg&#39;,
- &#39;test_videos/001_009_001/frame000094.jpg&#39;,
- &#39;test_videos/001_009_001/frame000080.jpg&#39;,
- &#39;test_videos/001_009_001/frame000081.jpg&#39;,
- &#39;test_videos/001_009_001/frame000095.jpg&#39;,
- &#39;test_videos/001_009_001/frame000042.jpg&#39;,
- &#39;test_videos/001_009_001/frame000056.jpg&#39;,
- &#39;test_videos/001_009_001/frame000108.jpg&#39;,
- &#39;test_videos/001_009_001/frame000068.jpg&#39;,
- &#39;test_videos/001_009_001/frame000040.jpg&#39;,
- &#39;test_videos/001_009_001/frame000054.jpg&#39;,
- &#39;test_videos/001_009_001/frame000083.jpg&#39;,
- &#39;test_videos/001_009_001/frame000097.jpg&#39;,
- &#39;test_videos/001_009_001/frame000096.jpg&#39;,
- &#39;test_videos/001_009_001/frame000082.jpg&#39;,
- &#39;test_videos/001_009_001/frame000055.jpg&#39;,
- &#39;test_videos/001_009_001/frame000041.jpg&#39;,
- &#39;test_videos/001_009_001/frame000069.jpg&#39;,
- &#39;test_videos/001_009_001/frame000109.jpg&#39;,
- &#39;test_videos/001_009_001/frame000045.jpg&#39;,
- &#39;test_videos/001_009_001/frame000051.jpg&#39;,
- &#39;test_videos/001_009_001/frame000079.jpg&#39;,
- &#39;test_videos/001_009_001/frame000086.jpg&#39;,
- &#39;test_videos/001_009_001/frame000092.jpg&#39;,
- &#39;test_videos/001_009_001/frame000093.jpg&#39;,
- &#39;test_videos/001_009_001/frame000087.jpg&#39;,
- &#39;test_videos/001_009_001/frame000078.jpg&#39;,
- &#39;test_videos/001_009_001/frame000050.jpg&#39;,
- &#39;test_videos/001_009_001/frame000044.jpg&#39;,
- &#39;test_videos/001_009_001/frame000052.jpg&#39;,
- &#39;test_videos/001_009_001/frame000046.jpg&#39;,
- &#39;test_videos/001_009_001/frame000091.jpg&#39;,
- &#39;test_videos/001_009_001/frame000085.jpg&#39;,
- &#39;test_videos/001_009_001/frame000084.jpg&#39;,
- &#39;test_videos/001_009_001/frame000090.jpg&#39;,
- &#39;test_videos/001_009_001/frame000047.jpg&#39;,
- &#39;test_videos/001_009_001/frame000053.jpg&#39;,
- &#39;test_videos/001_009_001/frame000102.jpg&#39;,
- &#39;test_videos/001_009_001/frame000116.jpg&#39;,
- &#39;test_videos/001_009_001/frame000076.jpg&#39;,
- &#39;test_videos/001_009_001/frame000062.jpg&#39;,
- &#39;test_videos/001_009_001/frame000089.jpg&#39;,
- &#39;test_videos/001_009_001/frame000088.jpg&#39;,
- &#39;test_videos/001_009_001/frame000063.jpg&#39;,
- &#39;test_videos/001_009_001/frame000077.jpg&#39;,
- &#39;test_videos/001_009_001/frame000117.jpg&#39;,
- &#39;test_videos/001_009_001/frame000103.jpg&#39;,
- &#39;test_videos/001_009_001/frame000115.jpg&#39;,
- &#39;test_videos/001_009_001/frame000101.jpg&#39;,
- &#39;test_videos/001_009_001/frame000049.jpg&#39;,
- &#39;test_videos/001_009_001/frame000061.jpg&#39;,
- &#39;test_videos/001_009_001/frame000075.jpg&#39;,
- &#39;test_videos/001_009_001/frame000074.jpg&#39;,
- &#39;test_videos/001_009_001/frame000060.jpg&#39;,
- &#39;test_videos/001_009_001/frame000048.jpg&#39;,
- &#39;test_videos/001_009_001/frame000100.jpg&#39;,
- &#39;test_videos/001_009_001/frame000114.jpg&#39;,
- &#39;test_videos/001_009_001/frame000110.jpg&#39;,
- &#39;test_videos/001_009_001/frame000104.jpg&#39;,
- &#39;test_videos/001_009_001/frame000064.jpg&#39;,
- &#39;test_videos/001_009_001/frame000070.jpg&#39;,
- &#39;test_videos/001_009_001/frame000058.jpg&#39;,
- &#39;test_videos/001_009_001/frame000059.jpg&#39;,
- &#39;test_videos/001_009_001/frame000071.jpg&#39;,
- &#39;test_videos/001_009_001/frame000065.jpg&#39;,
- &#39;test_videos/001_009_001/frame000105.jpg&#39;,
- &#39;test_videos/001_009_001/frame000111.jpg&#39;,
- &#39;test_videos/001_009_001/frame000107.jpg&#39;,
- &#39;test_videos/001_009_001/frame000113.jpg&#39;,
- &#39;test_videos/001_009_001/frame000073.jpg&#39;,
- &#39;test_videos/001_009_001/frame000067.jpg&#39;,
- &#39;test_videos/001_009_001/frame000098.jpg&#39;,
- &#39;test_videos/001_009_001/frame000099.jpg&#39;,
- &#39;test_videos/001_009_001/frame000066.jpg&#39;,
- &#39;test_videos/001_009_001/frame000072.jpg&#39;,
- &#39;test_videos/001_009_001/frame000112.jpg&#39;,
- &#39;test_videos/001_009_001/frame000106.jpg&#39;,
- &#39;test_videos/001_009_001/frame000029.jpg&#39;,
- &#39;test_videos/001_009_001/frame000015.jpg&#39;,
- &#39;test_videos/001_009_001/frame000001.jpg&#39;,
- &#39;test_videos/001_009_001/frame000000.jpg&#39;,
- &#39;test_videos/001_009_001/frame000014.jpg&#39;,
- &#39;test_videos/001_009_001/frame000028.jpg&#39;,
- &#39;test_videos/001_009_001/frame000002.jpg&#39;,
- &#39;test_videos/001_009_001/frame000016.jpg&#39;,
- &#39;test_videos/001_009_001/frame000017.jpg&#39;,
- &#39;test_videos/001_009_001/frame000003.jpg&#39;,
- &#39;test_videos/001_009_001/frame000007.jpg&#39;,
- &#39;test_videos/001_009_001/frame000013.jpg&#39;,
- &#39;test_videos/001_009_001/frame000012.jpg&#39;,
- &#39;test_videos/001_009_001/frame000006.jpg&#39;,
- &#39;test_videos/001_009_001/frame000010.jpg&#39;,
- &#39;test_videos/001_009_001/frame000004.jpg&#39;,
- &#39;test_videos/001_009_001/frame000038.jpg&#39;,
- &#39;test_videos/001_009_001/frame000039.jpg&#39;,
- &#39;test_videos/001_009_001/frame000005.jpg&#39;,
- &#39;test_videos/001_009_001/frame000011.jpg&#39;]</code></pre>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pics_list = img_paths</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">fps = <span class="number">10</span>  <span class="comment"># </span></span><br><span class="line">size = (<span class="number">1920</span>, <span class="number">1080</span>)  <span class="comment"># 视频尺寸</span></span><br><span class="line">out_file_name = <span class="string">&#x27;&#123;0&#125;.mp4&#x27;</span>.format(<span class="string">&#x27;示例视频&#x27;</span>)  <span class="comment"># 输出视频名称</span></span><br><span class="line">out_path =  <span class="string">&#x27;output_videos/&#x27;</span>  <span class="comment"># 输出视频路径</span></span><br><span class="line">out_file = os.path.join(out_path, out_file_name)</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fourcc = cv2.VideoWriter_fourcc(<span class="string">&#x27;D&#x27;</span>, <span class="string">&#x27;I&#x27;</span>, <span class="string">&#x27;V&#x27;</span>, <span class="string">&#x27;X&#x27;</span>)</span><br><span class="line">video = cv2.VideoWriter(out_file, fourcc, fps, size)</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> pics_list:</span><br><span class="line"><span class="comment">#    item = out_path + &#x27;/&#x27; + item</span></span><br><span class="line">    img = cv2.imread(item)</span><br><span class="line">    video.write(img)</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">video.release()</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="5-制作GIF"><a href="#5-制作GIF" class="headerlink" title="5. 制作GIF"></a>5. 制作GIF</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> imageio</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#picpath= &#x27;test_videos/001/001_009_001/&#x27;  # 图片路径</span></span><br><span class="line">picpath= <span class="string">&#x27;test_videos/001_009_001/&#x27;</span>  <span class="comment"># 图片路径</span></span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">img = os.listdir(picpath)</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">img_paths = []</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> path <span class="keyword">in</span> img:</span><br><span class="line">    i = picpath+path</span><br><span class="line">    img_paths.append(i)</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">img_paths</span><br></pre></td></tr></table></figure>
-
-<pre><code>[&#39;test_videos/001_009_001/frame000008.jpg&#39;,
- &#39;test_videos/001_009_001/frame000034.jpg&#39;,
- &#39;test_videos/001_009_001/frame000020.jpg&#39;,
- &#39;test_videos/001_009_001/frame000021.jpg&#39;,
- &#39;test_videos/001_009_001/frame000035.jpg&#39;,
- &#39;test_videos/001_009_001/frame000009.jpg&#39;,
- &#39;test_videos/001_009_001/frame000023.jpg&#39;,
- &#39;test_videos/001_009_001/frame000037.jpg&#39;,
- &#39;test_videos/001_009_001/frame000036.jpg&#39;,
- &#39;test_videos/001_009_001/frame000022.jpg&#39;,
- &#39;test_videos/001_009_001/frame000026.jpg&#39;,
- &#39;test_videos/001_009_001/frame000032.jpg&#39;,
- &#39;test_videos/001_009_001/frame000033.jpg&#39;,
- &#39;test_videos/001_009_001/frame000027.jpg&#39;,
- &#39;test_videos/001_009_001/frame000031.jpg&#39;,
- &#39;test_videos/001_009_001/frame000025.jpg&#39;,
- &#39;test_videos/001_009_001/frame000019.jpg&#39;,
- &#39;test_videos/001_009_001/frame000018.jpg&#39;,
- &#39;test_videos/001_009_001/frame000024.jpg&#39;,
- &#39;test_videos/001_009_001/frame000030.jpg&#39;,
- &#39;test_videos/001_009_001/frame000057.jpg&#39;,
- &#39;test_videos/001_009_001/frame000043.jpg&#39;,
- &#39;test_videos/001_009_001/frame000094.jpg&#39;,
- &#39;test_videos/001_009_001/frame000080.jpg&#39;,
- &#39;test_videos/001_009_001/frame000081.jpg&#39;,
- &#39;test_videos/001_009_001/frame000095.jpg&#39;,
- &#39;test_videos/001_009_001/frame000042.jpg&#39;,
- &#39;test_videos/001_009_001/frame000056.jpg&#39;,
- &#39;test_videos/001_009_001/frame000108.jpg&#39;,
- &#39;test_videos/001_009_001/frame000068.jpg&#39;,
- &#39;test_videos/001_009_001/frame000040.jpg&#39;,
- &#39;test_videos/001_009_001/frame000054.jpg&#39;,
- &#39;test_videos/001_009_001/frame000083.jpg&#39;,
- &#39;test_videos/001_009_001/frame000097.jpg&#39;,
- &#39;test_videos/001_009_001/frame000096.jpg&#39;,
- &#39;test_videos/001_009_001/frame000082.jpg&#39;,
- &#39;test_videos/001_009_001/frame000055.jpg&#39;,
- &#39;test_videos/001_009_001/frame000041.jpg&#39;,
- &#39;test_videos/001_009_001/frame000069.jpg&#39;,
- &#39;test_videos/001_009_001/frame000109.jpg&#39;,
- &#39;test_videos/001_009_001/frame000045.jpg&#39;,
- &#39;test_videos/001_009_001/frame000051.jpg&#39;,
- &#39;test_videos/001_009_001/frame000079.jpg&#39;,
- &#39;test_videos/001_009_001/frame000086.jpg&#39;,
- &#39;test_videos/001_009_001/frame000092.jpg&#39;,
- &#39;test_videos/001_009_001/frame000093.jpg&#39;,
- &#39;test_videos/001_009_001/frame000087.jpg&#39;,
- &#39;test_videos/001_009_001/frame000078.jpg&#39;,
- &#39;test_videos/001_009_001/frame000050.jpg&#39;,
- &#39;test_videos/001_009_001/frame000044.jpg&#39;,
- &#39;test_videos/001_009_001/frame000052.jpg&#39;,
- &#39;test_videos/001_009_001/frame000046.jpg&#39;,
- &#39;test_videos/001_009_001/frame000091.jpg&#39;,
- &#39;test_videos/001_009_001/frame000085.jpg&#39;,
- &#39;test_videos/001_009_001/frame000084.jpg&#39;,
- &#39;test_videos/001_009_001/frame000090.jpg&#39;,
- &#39;test_videos/001_009_001/frame000047.jpg&#39;,
- &#39;test_videos/001_009_001/frame000053.jpg&#39;,
- &#39;test_videos/001_009_001/frame000102.jpg&#39;,
- &#39;test_videos/001_009_001/frame000116.jpg&#39;,
- &#39;test_videos/001_009_001/frame000076.jpg&#39;,
- &#39;test_videos/001_009_001/frame000062.jpg&#39;,
- &#39;test_videos/001_009_001/frame000089.jpg&#39;,
- &#39;test_videos/001_009_001/frame000088.jpg&#39;,
- &#39;test_videos/001_009_001/frame000063.jpg&#39;,
- &#39;test_videos/001_009_001/frame000077.jpg&#39;,
- &#39;test_videos/001_009_001/frame000117.jpg&#39;,
- &#39;test_videos/001_009_001/frame000103.jpg&#39;,
- &#39;test_videos/001_009_001/frame000115.jpg&#39;,
- &#39;test_videos/001_009_001/frame000101.jpg&#39;,
- &#39;test_videos/001_009_001/frame000049.jpg&#39;,
- &#39;test_videos/001_009_001/frame000061.jpg&#39;,
- &#39;test_videos/001_009_001/frame000075.jpg&#39;,
- &#39;test_videos/001_009_001/frame000074.jpg&#39;,
- &#39;test_videos/001_009_001/frame000060.jpg&#39;,
- &#39;test_videos/001_009_001/frame000048.jpg&#39;,
- &#39;test_videos/001_009_001/frame000100.jpg&#39;,
- &#39;test_videos/001_009_001/frame000114.jpg&#39;,
- &#39;test_videos/001_009_001/frame000110.jpg&#39;,
- &#39;test_videos/001_009_001/frame000104.jpg&#39;,
- &#39;test_videos/001_009_001/frame000064.jpg&#39;,
- &#39;test_videos/001_009_001/frame000070.jpg&#39;,
- &#39;test_videos/001_009_001/frame000058.jpg&#39;,
- &#39;test_videos/001_009_001/frame000059.jpg&#39;,
- &#39;test_videos/001_009_001/frame000071.jpg&#39;,
- &#39;test_videos/001_009_001/frame000065.jpg&#39;,
- &#39;test_videos/001_009_001/frame000105.jpg&#39;,
- &#39;test_videos/001_009_001/frame000111.jpg&#39;,
- &#39;test_videos/001_009_001/frame000107.jpg&#39;,
- &#39;test_videos/001_009_001/frame000113.jpg&#39;,
- &#39;test_videos/001_009_001/frame000073.jpg&#39;,
- &#39;test_videos/001_009_001/frame000067.jpg&#39;,
- &#39;test_videos/001_009_001/frame000098.jpg&#39;,
- &#39;test_videos/001_009_001/frame000099.jpg&#39;,
- &#39;test_videos/001_009_001/frame000066.jpg&#39;,
- &#39;test_videos/001_009_001/frame000072.jpg&#39;,
- &#39;test_videos/001_009_001/frame000112.jpg&#39;,
- &#39;test_videos/001_009_001/frame000106.jpg&#39;,
- &#39;test_videos/001_009_001/frame000029.jpg&#39;,
- &#39;test_videos/001_009_001/frame000015.jpg&#39;,
- &#39;test_videos/001_009_001/frame000001.jpg&#39;,
- &#39;test_videos/001_009_001/frame000000.jpg&#39;,
- &#39;test_videos/001_009_001/frame000014.jpg&#39;,
- &#39;test_videos/001_009_001/frame000028.jpg&#39;,
- &#39;test_videos/001_009_001/frame000002.jpg&#39;,
- &#39;test_videos/001_009_001/frame000016.jpg&#39;,
- &#39;test_videos/001_009_001/frame000017.jpg&#39;,
- &#39;test_videos/001_009_001/frame000003.jpg&#39;,
- &#39;test_videos/001_009_001/frame000007.jpg&#39;,
- &#39;test_videos/001_009_001/frame000013.jpg&#39;,
- &#39;test_videos/001_009_001/frame000012.jpg&#39;,
- &#39;test_videos/001_009_001/frame000006.jpg&#39;,
- &#39;test_videos/001_009_001/frame000010.jpg&#39;,
- &#39;test_videos/001_009_001/frame000004.jpg&#39;,
- &#39;test_videos/001_009_001/frame000038.jpg&#39;,
- &#39;test_videos/001_009_001/frame000039.jpg&#39;,
- &#39;test_videos/001_009_001/frame000005.jpg&#39;,
- &#39;test_videos/001_009_001/frame000011.jpg&#39;]</code></pre>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">gif_images = []</span><br><span class="line"><span class="keyword">for</span> path <span class="keyword">in</span> img_paths:</span><br><span class="line">    gif_images.append(imageio.imread(path))</span><br><span class="line">imageio.mimsave(<span class="string">&quot;test.gif&quot;</span>,gif_images,fps=<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
-
-<h3 id="展示光流变化GIF"><a href="#展示光流变化GIF" class="headerlink" title="展示光流变化GIF"></a>展示光流变化GIF</h3><div style="text-align: center">
-<img src="/提取视频光流数据/001test.gif"/>
-</div>
-
-
-    
-
-    
-    <div class="page-reward">
-      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
-        <div class="tooltip tooltip-east">
-          <span class="tooltip-item">
-            赏
-          </span>
-          <span class="tooltip-content">
-            <span class="tooltip-text">
-              <span class="tooltip-inner">
-                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢支持<i
-                    class="icon icon-quo-right"></i></p>
-                <div class="reward-box">
-                  
-                  <div class="reward-box-item">
-                    <img class="reward-img" src="/img/%E6%94%AF%E4%BB%98%E5%AE%9D.jpg">
-                    <span class="reward-type">支付宝</span>
-                  </div>
-                  
-                  
-                  <div class="reward-box-item">
-                    <img class="reward-img" src="/img/%E5%BE%AE%E4%BF%A1.jpg">
-                    <span class="reward-type">微信</span>
-                  </div>
-                  
-                </div>
-              </span>
-            </span>
-          </span>
         </div>
-      </a>
-    </div>
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-
-    
-    
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a> -->
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/%E6%8F%90%E5%8F%96%E8%A7%86%E9%A2%91%E5%85%89%E6%B5%81%E6%95%B0%E6%8D%AE.html" alt="微信分享二维码"> -->
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-
-    
-    <div class="clearfix"></div>
-  </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-
-<nav id="article-nav">
   
   
-    <a href="/%E6%89%8B%E6%92%95BP%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">手撕BP神经网络</div>
-      <i class="icon-circle-right"></i>
-    </a>
+    </div></section>
   
-</nav>
 
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%A7%86%E9%A2%91%E6%8F%90%E5%8F%96%E6%95%B0%E6%8D%AE%E5%B8%A7"><span class="toc-number">1.</span> <span class="toc-text">1. 视频提取数据帧</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E9%80%9A%E8%BF%87%E8%BF%9E%E7%BB%AD%E5%B8%A7%E6%8F%90%E5%8F%96TVL1%E5%85%89%E6%B5%81"><span class="toc-number">2.</span> <span class="toc-text">2. 通过连续帧提取TVL1光流</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%8F%AF%E8%A7%86%E5%8C%96%E5%85%89%E6%B5%81"><span class="toc-number">3.</span> <span class="toc-text">3.可视化光流</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%88%B6%E4%BD%9C%E8%A7%86%E9%A2%91"><span class="toc-number">4.</span> <span class="toc-text">4.制作视频</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%88%B6%E4%BD%9CGIF"><span class="toc-number">5.</span> <span class="toc-text">5. 制作GIF</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%95%E7%A4%BA%E5%85%89%E6%B5%81%E5%8F%98%E5%8C%96GIF"><span class="toc-number">6.</span> <span class="toc-text">展示光流变化GIF</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-
-
-
-
-
+    
 
 
           </div>
@@ -708,8 +243,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,

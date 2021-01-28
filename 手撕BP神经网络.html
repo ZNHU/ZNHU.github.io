@@ -6,23 +6,54 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>提取视频光流数据 | HuZhennan</title>
+  <title>手撕BP神经网络 | HuZhennan</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="article">
-<meta property="og:title" content="提取视频光流数据">
-<meta property="og:url" content="http://yoursite.com/%E6%8F%90%E5%8F%96%E8%A7%86%E9%A2%91%E5%85%89%E6%B5%81%E6%95%B0%E6%8D%AE.html">
+  <meta name="description" content="神经网络组成单元和结构">
+<meta property="og:type" content="article">
+<meta property="og:title" content="手撕BP神经网络">
+<meta property="og:url" content="http://yoursite.com/%E6%89%8B%E6%92%95BP%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C.html">
 <meta property="og:site_name" content="HuZhennan">
+<meta property="og:description" content="神经网络组成单元和结构">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://yoursite.com/提取视频光流数据/封面.png">
-<meta property="og:image" content="http://yoursite.com/提取视频光流数据/001test.gif">
-<meta property="article:published_time" content="2021-01-27T10:11:32.000Z">
-<meta property="article:modified_time" content="2021-01-27T10:23:01.508Z">
+<meta property="og:image" content="http://yoursite.com/asset/blogimg/%E9%BB%91%E6%B4%9E.jpg">
+<meta property="og:image" content="http://yoursite.com/手撕BP神经网络/0_5kA2vn4UqmI4iKLM.png">
+<meta property="og:image" content="http://yoursite.com/手撕BP神经网络/0_C_nYHONjxjUVgIYh.jpg">
+<meta property="og:image" content="http://yoursite.com/手撕BP神经网络/ANNphote1.png">
+<meta property="og:image" content="http://yoursite.com/手撕BP神经网络/ANNphote2.png">
+<meta property="og:image" content="http://yoursite.com/手撕BP神经网络/ANNphote3.png">
+<meta property="og:image" content="http://yoursite.com/手撕BP神经网络/ANNphote4.png">
+<meta property="og:image" content="http://yoursite.com/手撕BP神经网络/ANNphote5.png">
+<meta property="og:image" content="http://yoursite.com/手撕BP神经网络/ANNphote6.png">
+<meta property="og:image" content="http://yoursite.com/手撕BP神经网络/ANNphote7.png">
+<meta property="og:image" content="http://yoursite.com/手撕BP神经网络/ANNphote8.png">
+<meta property="og:image" content="http://yoursite.com/手撕BP神经网络/ANNphote9.png">
+<meta property="og:image" content="http://yoursite.com/手撕BP神经网络/ANNphote10.png">
+<meta property="og:image" content="http://yoursite.com/手撕BP神经网络/ANNphote11.png">
+<meta property="og:image" content="http://yoursite.com/手撕BP神经网络/ANNphote12.png">
+<meta property="og:image" content="http://yoursite.com/手撕BP神经网络/ANNphote13.png">
+<meta property="og:image" content="http://yoursite.com/手撕BP神经网络/ANNphote14.png">
+<meta property="og:image" content="http://yoursite.com/手撕BP神经网络/ANNphote15.png">
+<meta property="og:image" content="http://yoursite.com/手撕BP神经网络/ANNphote16.png">
+<meta property="og:image" content="http://yoursite.com/手撕BP神经网络/ANNphote17.png">
+<meta property="og:image" content="http://yoursite.com/手撕BP神经网络/backpropagation.png">
+<meta property="og:image" content="http://yoursite.com/手撕BP神经网络/1.jpg">
+<meta property="og:image" content="http://yoursite.com/手撕BP神经网络/2.jpg">
+<meta property="og:image" content="http://yoursite.com/手撕BP神经网络/3.jpg">
+<meta property="og:image" content="http://yoursite.com/手撕BP神经网络/4.jpg">
+<meta property="og:image" content="http://yoursite.com/手撕BP神经网络/5.jpg">
+<meta property="og:image" content="http://yoursite.com/手撕BP神经网络/6.jpg">
+<meta property="og:image" content="http://yoursite.com/手撕BP神经网络/7.jpg">
+<meta property="og:image" content="http://yoursite.com/手撕BP神经网络/8.jpg">
+<meta property="og:image" content="http://yoursite.com/手撕BP神经网络/9.jpg">
+<meta property="og:image" content="http://yoursite.com/手撕BP神经网络/10.jpg">
+<meta property="article:published_time" content="2020-06-06T08:28:40.000Z">
+<meta property="article:modified_time" content="2020-07-04T07:15:06.000Z">
 <meta property="article:author" content="胡振楠">
 <meta property="article:tag" content="Python,Machine learning,Deep learning">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/提取视频光流数据/封面.png">
+<meta name="twitter:image" content="http://yoursite.com/asset/blogimg/%E9%BB%91%E6%B4%9E.jpg">
   
     <link rel="alternative" href="/atom.xml" title="HuZhennan" type="application/atom+xml">
   
@@ -170,22 +201,22 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-提取视频光流数据" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-手撕BP神经网络" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      提取视频光流数据
+      手撕BP神经网络
     </h1>
   
 
 
   
   
-<a href="/%E6%8F%90%E5%8F%96%E8%A7%86%E9%A2%91%E5%85%89%E6%B5%81%E6%95%B0%E6%8D%AE.html" class="archive-article-date">
-        <time datetime="2021-01-27T10:11:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-27</time>
+<a href="/%E6%89%8B%E6%92%95BP%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C.html" class="archive-article-date">
+        <time datetime="2020-06-06T08:28:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-06</time>
 </a>
 
   
@@ -194,336 +225,123 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <div style="text-align: center">
-<img src="/提取视频光流数据/封面.png"/>
+    <p><img src="/asset/blogimg/%E9%BB%91%E6%B4%9E.jpg"></p>
+<hr>
+<p><strong>神经网络组成单元和结构</strong></p>
+<div style="text-align: center">
+<img src="/手撕BP神经网络/0_5kA2vn4UqmI4iKLM.png"/>
 </div>
 <a id="more"></a>
-
-<p><strong>深度学习中训练数据所包含的信息一定程度上决定了最终的模型性能，多尺度特征融合和多类型信息融合方式不断出现，在3D卷积神经网络中使用光流信息融合RGB数据，在性能上带来提升，以下为视频数据提取光流的方式</strong></p>
-<ul>
-<li>删除当前目录下所有的.DS_Store文件<br>find ./ -name “.DS_Store” -depth -exec rm {} ;<h3 id="1-视频提取数据帧"><a href="#1-视频提取数据帧" class="headerlink" title="1. 视频提取数据帧"></a>1. 视频提取数据帧</h3></li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> os</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">videoname = <span class="string">&#x27;001.mp4&#x27;</span></span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">path = videoname.split(<span class="string">&#x27;.&#x27;</span>)[<span class="number">0</span>]</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">cap = cv2.VideoCapture(videoname) <span class="comment">#创建一个视频获取对象</span></span><br><span class="line">flag = <span class="number">0</span>  <span class="comment">#用于指定帧的序号</span></span><br><span class="line">fr=<span class="number">1</span></span><br><span class="line">time=<span class="number">0</span>    <span class="comment">#用于指定帧的时长</span></span><br><span class="line"><span class="keyword">while</span> (cap.isOpened()):</span><br><span class="line">    cap.set(cv2.CAP_PROP_POS_MSEC,time)</span><br><span class="line">    </span><br><span class="line">    <span class="comment">#cap.set(cv2.CAP_PROP_POS_FRAMES,flag) #设置帧数标记</span></span><br><span class="line">    ret,im = cap.read()<span class="comment">#获取图像</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> ret:  <span class="comment">#如果获取失败，则结束</span></span><br><span class="line">        print(<span class="string">&quot;exit&quot;</span>)</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(path):</span><br><span class="line">        os.makedirs(path)</span><br><span class="line">    <span class="comment">#cv2.waitKey(2000)#延时</span></span><br><span class="line">    <span class="comment">#cv2.imshow(&#x27;a&#x27;,im)#显示图像，用在循环中可以播放视频</span></span><br><span class="line">    cv2.imwrite(path+<span class="string">&#x27;/&#123;0:05d&#125;.jpg&#x27;</span>.format(fr),im)<span class="comment">#保存图片</span></span><br><span class="line">    time+=<span class="number">50</span>  <span class="comment">#设置每隔50ms读取帧</span></span><br><span class="line">    <span class="comment">#flag+=10  #每隔10帧读取一帧</span></span><br><span class="line">    fr+=<span class="number">1</span></span><br></pre></td></tr></table></figure>
-
-<pre><code>exit</code></pre>
-<h3 id="2-通过连续帧提取TVL1光流"><a href="#2-通过连续帧提取TVL1光流" class="headerlink" title="2. 通过连续帧提取TVL1光流"></a>2. 通过连续帧提取TVL1光流</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> glob <span class="keyword">import</span> glob</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">cal_for_frames</span>(<span class="params">video_path</span>):</span></span><br><span class="line">    frames = glob(os.path.join(video_path, <span class="string">&#x27;*.jpg&#x27;</span>))</span><br><span class="line">    frames.sort()</span><br><span class="line"> </span><br><span class="line">    flow = []</span><br><span class="line">    prev = cv2.imread(frames[<span class="number">0</span>])</span><br><span class="line">    prev = cv2.cvtColor(prev, cv2.COLOR_BGR2GRAY)</span><br><span class="line">    <span class="keyword">for</span> i, frame_curr <span class="keyword">in</span> enumerate(frames[<span class="number">1</span>:]):</span><br><span class="line">        curr = cv2.imread(frame_curr)</span><br><span class="line">        curr = cv2.cvtColor(curr, cv2.COLOR_BGR2GRAY)</span><br><span class="line">        tmp_flow = compute_TVL1(prev, curr)</span><br><span class="line">        flow.append(tmp_flow)</span><br><span class="line">        prev = curr</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">return</span> flow</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">compute_TVL1</span>(<span class="params">prev, curr, bound=<span class="number">15</span></span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;Compute the TV-L1 optical flow.&quot;&quot;&quot;</span></span><br><span class="line">    TVL1=cv2.optflow.DualTVL1OpticalFlow_create()</span><br><span class="line">    <span class="comment"># TVL1 = cv2.DualTVL1OpticalFlow_create()</span></span><br><span class="line">    <span class="comment"># TVL1=cv2.createOptFlow_DualTVL1()</span></span><br><span class="line">    flow = TVL1.calc(prev, curr, <span class="literal">None</span>)</span><br><span class="line">    <span class="keyword">assert</span> flow.dtype == np.float32</span><br><span class="line"> </span><br><span class="line">    flow = (flow + bound) * (<span class="number">255.0</span> / (<span class="number">2</span> * bound))</span><br><span class="line">    flow = np.round(flow).astype(int)</span><br><span class="line">    flow[flow &gt;= <span class="number">255</span>] = <span class="number">255</span></span><br><span class="line">    flow[flow &lt;= <span class="number">0</span>] = <span class="number">0</span></span><br><span class="line"> </span><br><span class="line">    <span class="keyword">return</span> flow</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">save_flow</span>(<span class="params">video_flows, flow_path</span>):</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(os.path.join(flow_path, <span class="string">&#x27;u&#x27;</span>)):</span><br><span class="line">        os.mkdir(os.path.join(flow_path, <span class="string">&#x27;u&#x27;</span>))</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(os.path.join(flow_path, <span class="string">&#x27;v&#x27;</span>)):</span><br><span class="line">        os.mkdir(os.path.join(flow_path, <span class="string">&#x27;v&#x27;</span>))</span><br><span class="line">    <span class="keyword">for</span> i, flow <span class="keyword">in</span> enumerate(video_flows):</span><br><span class="line">        cv2.imwrite(os.path.join(flow_path,<span class="string">&#x27;u&#x27;</span>, <span class="string">&quot;&#123;:06d&#125;.jpg&quot;</span>.format(i)),</span><br><span class="line">                    flow[:, :, <span class="number">0</span>])</span><br><span class="line">        cv2.imwrite(os.path.join(flow_path,<span class="string">&#x27;v&#x27;</span>, <span class="string">&quot;&#123;:06d&#125;.jpg&quot;</span>.format(i)),</span><br><span class="line">                    flow[:, :, <span class="number">1</span>])</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">extract_flow</span>(<span class="params">video_path, flow_path</span>):</span></span><br><span class="line">    flow = cal_for_frames(video_path)</span><br><span class="line">    save_flow(flow, flow_path)</span><br><span class="line">    print(<span class="string">&#x27;complete:&#x27;</span> + flow_path)</span><br><span class="line">    <span class="keyword">return</span></span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">video_path = path+<span class="string">&#x27;/&#x27;</span>  <span class="comment">#保存帧的路径</span></span><br><span class="line">save_path = path+<span class="string">&#x27;flow/&#x27;</span></span><br><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(save_path):</span><br><span class="line">    os.makedirs(save_path)</span><br><span class="line">extract_flow(video_path,save_path)</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-可视化光流"><a href="#3-可视化光流" class="headerlink" title="3.可视化光流"></a>3.可视化光流</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2 <span class="keyword">as</span> cv</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> os</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#path = &#x27;test_videos/001&#x27;</span></span><br><span class="line">path = <span class="string">&#x27;test_videos/&#x27;</span></span><br><span class="line">videos = os.listdir(path)</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">TVL1 = cv.optflow.DualTVL1OpticalFlow_create()</span><br><span class="line"><span class="keyword">for</span> video <span class="keyword">in</span> videos:</span><br><span class="line">    video_path = path + <span class="string">&#x27;/&#x27;</span> + video</span><br><span class="line">    cap = cv.VideoCapture(video_path)</span><br><span class="line">    ret, frame1 = cap.read()</span><br><span class="line">    prvs = cv.cvtColor(frame1,cv.COLOR_BGR2GRAY)</span><br><span class="line">    hsv = np.zeros_like(frame1)</span><br><span class="line">    hsv[...,<span class="number">1</span>] = <span class="number">255</span></span><br><span class="line">    count = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span>(<span class="literal">True</span>):</span><br><span class="line">        ret, frame2 = cap.read()</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> ret:</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        next = cv.cvtColor(frame2,cv.COLOR_BGR2GRAY)</span><br><span class="line"> </span><br><span class="line">        <span class="comment"># 返回一个两通道的光流向量，实际上是每个点的像素位移值</span></span><br><span class="line">        flow = TVL1.calc(prvs,next, <span class="literal">None</span>)</span><br><span class="line"> </span><br><span class="line">        <span class="comment"># 笛卡尔坐标转换为极坐标，获得极轴和极角</span></span><br><span class="line">        mag, ang = cv.cartToPolar(flow[...,<span class="number">0</span>], flow[...,<span class="number">1</span>])</span><br><span class="line"> </span><br><span class="line">        hsv[...,<span class="number">0</span>] = ang*<span class="number">180</span>/np.pi/<span class="number">2</span>  <span class="comment">#角度</span></span><br><span class="line">        hsv[...,<span class="number">2</span>] = cv.normalize(mag,<span class="literal">None</span>,<span class="number">0</span>,<span class="number">255</span>,cv.NORM_MINMAX)</span><br><span class="line">        bgr = cv.cvtColor(hsv,cv.COLOR_HSV2BGR)</span><br><span class="line">        path_ = path + <span class="string">&#x27;/&#x27;</span> + os.path.basename(video).split(<span class="string">&#x27;.&#x27;</span>)[<span class="number">0</span>]</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(path_):</span><br><span class="line">            os.makedirs(path_)</span><br><span class="line">        cv.imwrite(path_ + <span class="string">&quot;/frame&#123;0:06d&#125;.jpg&quot;</span>.format(count), bgr)</span><br><span class="line">        count += <span class="number">1</span></span><br><span class="line">        prvs = next</span><br><span class="line">    cap.release()</span><br><span class="line">    cv.destroyAllWindows()</span><br></pre></td></tr></table></figure>
-
-<h3 id="4-制作视频"><a href="#4-制作视频" class="headerlink" title="4.制作视频"></a>4.制作视频</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> cv2</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#picpath= &#x27;test_videos/001/001_009_001/&#x27;  # 图片路径</span></span><br><span class="line">picpath= <span class="string">&#x27;test_videos/001_009_001/&#x27;</span>  <span class="comment"># 图片路径</span></span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">img = os.listdir(picpath)</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">img_paths = []</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> path <span class="keyword">in</span> img:</span><br><span class="line">    i = picpath+path</span><br><span class="line">    img_paths.append(i)</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">img_paths</span><br></pre></td></tr></table></figure>
-
-<pre><code>[&#39;test_videos/001_009_001/frame000008.jpg&#39;,
- &#39;test_videos/001_009_001/frame000034.jpg&#39;,
- &#39;test_videos/001_009_001/frame000020.jpg&#39;,
- &#39;test_videos/001_009_001/frame000021.jpg&#39;,
- &#39;test_videos/001_009_001/frame000035.jpg&#39;,
- &#39;test_videos/001_009_001/frame000009.jpg&#39;,
- &#39;test_videos/001_009_001/frame000023.jpg&#39;,
- &#39;test_videos/001_009_001/frame000037.jpg&#39;,
- &#39;test_videos/001_009_001/frame000036.jpg&#39;,
- &#39;test_videos/001_009_001/frame000022.jpg&#39;,
- &#39;test_videos/001_009_001/frame000026.jpg&#39;,
- &#39;test_videos/001_009_001/frame000032.jpg&#39;,
- &#39;test_videos/001_009_001/frame000033.jpg&#39;,
- &#39;test_videos/001_009_001/frame000027.jpg&#39;,
- &#39;test_videos/001_009_001/frame000031.jpg&#39;,
- &#39;test_videos/001_009_001/frame000025.jpg&#39;,
- &#39;test_videos/001_009_001/frame000019.jpg&#39;,
- &#39;test_videos/001_009_001/frame000018.jpg&#39;,
- &#39;test_videos/001_009_001/frame000024.jpg&#39;,
- &#39;test_videos/001_009_001/frame000030.jpg&#39;,
- &#39;test_videos/001_009_001/frame000057.jpg&#39;,
- &#39;test_videos/001_009_001/frame000043.jpg&#39;,
- &#39;test_videos/001_009_001/frame000094.jpg&#39;,
- &#39;test_videos/001_009_001/frame000080.jpg&#39;,
- &#39;test_videos/001_009_001/frame000081.jpg&#39;,
- &#39;test_videos/001_009_001/frame000095.jpg&#39;,
- &#39;test_videos/001_009_001/frame000042.jpg&#39;,
- &#39;test_videos/001_009_001/frame000056.jpg&#39;,
- &#39;test_videos/001_009_001/frame000108.jpg&#39;,
- &#39;test_videos/001_009_001/frame000068.jpg&#39;,
- &#39;test_videos/001_009_001/frame000040.jpg&#39;,
- &#39;test_videos/001_009_001/frame000054.jpg&#39;,
- &#39;test_videos/001_009_001/frame000083.jpg&#39;,
- &#39;test_videos/001_009_001/frame000097.jpg&#39;,
- &#39;test_videos/001_009_001/frame000096.jpg&#39;,
- &#39;test_videos/001_009_001/frame000082.jpg&#39;,
- &#39;test_videos/001_009_001/frame000055.jpg&#39;,
- &#39;test_videos/001_009_001/frame000041.jpg&#39;,
- &#39;test_videos/001_009_001/frame000069.jpg&#39;,
- &#39;test_videos/001_009_001/frame000109.jpg&#39;,
- &#39;test_videos/001_009_001/frame000045.jpg&#39;,
- &#39;test_videos/001_009_001/frame000051.jpg&#39;,
- &#39;test_videos/001_009_001/frame000079.jpg&#39;,
- &#39;test_videos/001_009_001/frame000086.jpg&#39;,
- &#39;test_videos/001_009_001/frame000092.jpg&#39;,
- &#39;test_videos/001_009_001/frame000093.jpg&#39;,
- &#39;test_videos/001_009_001/frame000087.jpg&#39;,
- &#39;test_videos/001_009_001/frame000078.jpg&#39;,
- &#39;test_videos/001_009_001/frame000050.jpg&#39;,
- &#39;test_videos/001_009_001/frame000044.jpg&#39;,
- &#39;test_videos/001_009_001/frame000052.jpg&#39;,
- &#39;test_videos/001_009_001/frame000046.jpg&#39;,
- &#39;test_videos/001_009_001/frame000091.jpg&#39;,
- &#39;test_videos/001_009_001/frame000085.jpg&#39;,
- &#39;test_videos/001_009_001/frame000084.jpg&#39;,
- &#39;test_videos/001_009_001/frame000090.jpg&#39;,
- &#39;test_videos/001_009_001/frame000047.jpg&#39;,
- &#39;test_videos/001_009_001/frame000053.jpg&#39;,
- &#39;test_videos/001_009_001/frame000102.jpg&#39;,
- &#39;test_videos/001_009_001/frame000116.jpg&#39;,
- &#39;test_videos/001_009_001/frame000076.jpg&#39;,
- &#39;test_videos/001_009_001/frame000062.jpg&#39;,
- &#39;test_videos/001_009_001/frame000089.jpg&#39;,
- &#39;test_videos/001_009_001/frame000088.jpg&#39;,
- &#39;test_videos/001_009_001/frame000063.jpg&#39;,
- &#39;test_videos/001_009_001/frame000077.jpg&#39;,
- &#39;test_videos/001_009_001/frame000117.jpg&#39;,
- &#39;test_videos/001_009_001/frame000103.jpg&#39;,
- &#39;test_videos/001_009_001/frame000115.jpg&#39;,
- &#39;test_videos/001_009_001/frame000101.jpg&#39;,
- &#39;test_videos/001_009_001/frame000049.jpg&#39;,
- &#39;test_videos/001_009_001/frame000061.jpg&#39;,
- &#39;test_videos/001_009_001/frame000075.jpg&#39;,
- &#39;test_videos/001_009_001/frame000074.jpg&#39;,
- &#39;test_videos/001_009_001/frame000060.jpg&#39;,
- &#39;test_videos/001_009_001/frame000048.jpg&#39;,
- &#39;test_videos/001_009_001/frame000100.jpg&#39;,
- &#39;test_videos/001_009_001/frame000114.jpg&#39;,
- &#39;test_videos/001_009_001/frame000110.jpg&#39;,
- &#39;test_videos/001_009_001/frame000104.jpg&#39;,
- &#39;test_videos/001_009_001/frame000064.jpg&#39;,
- &#39;test_videos/001_009_001/frame000070.jpg&#39;,
- &#39;test_videos/001_009_001/frame000058.jpg&#39;,
- &#39;test_videos/001_009_001/frame000059.jpg&#39;,
- &#39;test_videos/001_009_001/frame000071.jpg&#39;,
- &#39;test_videos/001_009_001/frame000065.jpg&#39;,
- &#39;test_videos/001_009_001/frame000105.jpg&#39;,
- &#39;test_videos/001_009_001/frame000111.jpg&#39;,
- &#39;test_videos/001_009_001/frame000107.jpg&#39;,
- &#39;test_videos/001_009_001/frame000113.jpg&#39;,
- &#39;test_videos/001_009_001/frame000073.jpg&#39;,
- &#39;test_videos/001_009_001/frame000067.jpg&#39;,
- &#39;test_videos/001_009_001/frame000098.jpg&#39;,
- &#39;test_videos/001_009_001/frame000099.jpg&#39;,
- &#39;test_videos/001_009_001/frame000066.jpg&#39;,
- &#39;test_videos/001_009_001/frame000072.jpg&#39;,
- &#39;test_videos/001_009_001/frame000112.jpg&#39;,
- &#39;test_videos/001_009_001/frame000106.jpg&#39;,
- &#39;test_videos/001_009_001/frame000029.jpg&#39;,
- &#39;test_videos/001_009_001/frame000015.jpg&#39;,
- &#39;test_videos/001_009_001/frame000001.jpg&#39;,
- &#39;test_videos/001_009_001/frame000000.jpg&#39;,
- &#39;test_videos/001_009_001/frame000014.jpg&#39;,
- &#39;test_videos/001_009_001/frame000028.jpg&#39;,
- &#39;test_videos/001_009_001/frame000002.jpg&#39;,
- &#39;test_videos/001_009_001/frame000016.jpg&#39;,
- &#39;test_videos/001_009_001/frame000017.jpg&#39;,
- &#39;test_videos/001_009_001/frame000003.jpg&#39;,
- &#39;test_videos/001_009_001/frame000007.jpg&#39;,
- &#39;test_videos/001_009_001/frame000013.jpg&#39;,
- &#39;test_videos/001_009_001/frame000012.jpg&#39;,
- &#39;test_videos/001_009_001/frame000006.jpg&#39;,
- &#39;test_videos/001_009_001/frame000010.jpg&#39;,
- &#39;test_videos/001_009_001/frame000004.jpg&#39;,
- &#39;test_videos/001_009_001/frame000038.jpg&#39;,
- &#39;test_videos/001_009_001/frame000039.jpg&#39;,
- &#39;test_videos/001_009_001/frame000005.jpg&#39;,
- &#39;test_videos/001_009_001/frame000011.jpg&#39;]</code></pre>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pics_list = img_paths</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">fps = <span class="number">10</span>  <span class="comment"># </span></span><br><span class="line">size = (<span class="number">1920</span>, <span class="number">1080</span>)  <span class="comment"># 视频尺寸</span></span><br><span class="line">out_file_name = <span class="string">&#x27;&#123;0&#125;.mp4&#x27;</span>.format(<span class="string">&#x27;示例视频&#x27;</span>)  <span class="comment"># 输出视频名称</span></span><br><span class="line">out_path =  <span class="string">&#x27;output_videos/&#x27;</span>  <span class="comment"># 输出视频路径</span></span><br><span class="line">out_file = os.path.join(out_path, out_file_name)</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fourcc = cv2.VideoWriter_fourcc(<span class="string">&#x27;D&#x27;</span>, <span class="string">&#x27;I&#x27;</span>, <span class="string">&#x27;V&#x27;</span>, <span class="string">&#x27;X&#x27;</span>)</span><br><span class="line">video = cv2.VideoWriter(out_file, fourcc, fps, size)</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> pics_list:</span><br><span class="line"><span class="comment">#    item = out_path + &#x27;/&#x27; + item</span></span><br><span class="line">    img = cv2.imread(item)</span><br><span class="line">    video.write(img)</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">video.release()</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="5-制作GIF"><a href="#5-制作GIF" class="headerlink" title="5. 制作GIF"></a>5. 制作GIF</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> imageio</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#picpath= &#x27;test_videos/001/001_009_001/&#x27;  # 图片路径</span></span><br><span class="line">picpath= <span class="string">&#x27;test_videos/001_009_001/&#x27;</span>  <span class="comment"># 图片路径</span></span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">img = os.listdir(picpath)</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">img_paths = []</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> path <span class="keyword">in</span> img:</span><br><span class="line">    i = picpath+path</span><br><span class="line">    img_paths.append(i)</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">img_paths</span><br></pre></td></tr></table></figure>
-
-<pre><code>[&#39;test_videos/001_009_001/frame000008.jpg&#39;,
- &#39;test_videos/001_009_001/frame000034.jpg&#39;,
- &#39;test_videos/001_009_001/frame000020.jpg&#39;,
- &#39;test_videos/001_009_001/frame000021.jpg&#39;,
- &#39;test_videos/001_009_001/frame000035.jpg&#39;,
- &#39;test_videos/001_009_001/frame000009.jpg&#39;,
- &#39;test_videos/001_009_001/frame000023.jpg&#39;,
- &#39;test_videos/001_009_001/frame000037.jpg&#39;,
- &#39;test_videos/001_009_001/frame000036.jpg&#39;,
- &#39;test_videos/001_009_001/frame000022.jpg&#39;,
- &#39;test_videos/001_009_001/frame000026.jpg&#39;,
- &#39;test_videos/001_009_001/frame000032.jpg&#39;,
- &#39;test_videos/001_009_001/frame000033.jpg&#39;,
- &#39;test_videos/001_009_001/frame000027.jpg&#39;,
- &#39;test_videos/001_009_001/frame000031.jpg&#39;,
- &#39;test_videos/001_009_001/frame000025.jpg&#39;,
- &#39;test_videos/001_009_001/frame000019.jpg&#39;,
- &#39;test_videos/001_009_001/frame000018.jpg&#39;,
- &#39;test_videos/001_009_001/frame000024.jpg&#39;,
- &#39;test_videos/001_009_001/frame000030.jpg&#39;,
- &#39;test_videos/001_009_001/frame000057.jpg&#39;,
- &#39;test_videos/001_009_001/frame000043.jpg&#39;,
- &#39;test_videos/001_009_001/frame000094.jpg&#39;,
- &#39;test_videos/001_009_001/frame000080.jpg&#39;,
- &#39;test_videos/001_009_001/frame000081.jpg&#39;,
- &#39;test_videos/001_009_001/frame000095.jpg&#39;,
- &#39;test_videos/001_009_001/frame000042.jpg&#39;,
- &#39;test_videos/001_009_001/frame000056.jpg&#39;,
- &#39;test_videos/001_009_001/frame000108.jpg&#39;,
- &#39;test_videos/001_009_001/frame000068.jpg&#39;,
- &#39;test_videos/001_009_001/frame000040.jpg&#39;,
- &#39;test_videos/001_009_001/frame000054.jpg&#39;,
- &#39;test_videos/001_009_001/frame000083.jpg&#39;,
- &#39;test_videos/001_009_001/frame000097.jpg&#39;,
- &#39;test_videos/001_009_001/frame000096.jpg&#39;,
- &#39;test_videos/001_009_001/frame000082.jpg&#39;,
- &#39;test_videos/001_009_001/frame000055.jpg&#39;,
- &#39;test_videos/001_009_001/frame000041.jpg&#39;,
- &#39;test_videos/001_009_001/frame000069.jpg&#39;,
- &#39;test_videos/001_009_001/frame000109.jpg&#39;,
- &#39;test_videos/001_009_001/frame000045.jpg&#39;,
- &#39;test_videos/001_009_001/frame000051.jpg&#39;,
- &#39;test_videos/001_009_001/frame000079.jpg&#39;,
- &#39;test_videos/001_009_001/frame000086.jpg&#39;,
- &#39;test_videos/001_009_001/frame000092.jpg&#39;,
- &#39;test_videos/001_009_001/frame000093.jpg&#39;,
- &#39;test_videos/001_009_001/frame000087.jpg&#39;,
- &#39;test_videos/001_009_001/frame000078.jpg&#39;,
- &#39;test_videos/001_009_001/frame000050.jpg&#39;,
- &#39;test_videos/001_009_001/frame000044.jpg&#39;,
- &#39;test_videos/001_009_001/frame000052.jpg&#39;,
- &#39;test_videos/001_009_001/frame000046.jpg&#39;,
- &#39;test_videos/001_009_001/frame000091.jpg&#39;,
- &#39;test_videos/001_009_001/frame000085.jpg&#39;,
- &#39;test_videos/001_009_001/frame000084.jpg&#39;,
- &#39;test_videos/001_009_001/frame000090.jpg&#39;,
- &#39;test_videos/001_009_001/frame000047.jpg&#39;,
- &#39;test_videos/001_009_001/frame000053.jpg&#39;,
- &#39;test_videos/001_009_001/frame000102.jpg&#39;,
- &#39;test_videos/001_009_001/frame000116.jpg&#39;,
- &#39;test_videos/001_009_001/frame000076.jpg&#39;,
- &#39;test_videos/001_009_001/frame000062.jpg&#39;,
- &#39;test_videos/001_009_001/frame000089.jpg&#39;,
- &#39;test_videos/001_009_001/frame000088.jpg&#39;,
- &#39;test_videos/001_009_001/frame000063.jpg&#39;,
- &#39;test_videos/001_009_001/frame000077.jpg&#39;,
- &#39;test_videos/001_009_001/frame000117.jpg&#39;,
- &#39;test_videos/001_009_001/frame000103.jpg&#39;,
- &#39;test_videos/001_009_001/frame000115.jpg&#39;,
- &#39;test_videos/001_009_001/frame000101.jpg&#39;,
- &#39;test_videos/001_009_001/frame000049.jpg&#39;,
- &#39;test_videos/001_009_001/frame000061.jpg&#39;,
- &#39;test_videos/001_009_001/frame000075.jpg&#39;,
- &#39;test_videos/001_009_001/frame000074.jpg&#39;,
- &#39;test_videos/001_009_001/frame000060.jpg&#39;,
- &#39;test_videos/001_009_001/frame000048.jpg&#39;,
- &#39;test_videos/001_009_001/frame000100.jpg&#39;,
- &#39;test_videos/001_009_001/frame000114.jpg&#39;,
- &#39;test_videos/001_009_001/frame000110.jpg&#39;,
- &#39;test_videos/001_009_001/frame000104.jpg&#39;,
- &#39;test_videos/001_009_001/frame000064.jpg&#39;,
- &#39;test_videos/001_009_001/frame000070.jpg&#39;,
- &#39;test_videos/001_009_001/frame000058.jpg&#39;,
- &#39;test_videos/001_009_001/frame000059.jpg&#39;,
- &#39;test_videos/001_009_001/frame000071.jpg&#39;,
- &#39;test_videos/001_009_001/frame000065.jpg&#39;,
- &#39;test_videos/001_009_001/frame000105.jpg&#39;,
- &#39;test_videos/001_009_001/frame000111.jpg&#39;,
- &#39;test_videos/001_009_001/frame000107.jpg&#39;,
- &#39;test_videos/001_009_001/frame000113.jpg&#39;,
- &#39;test_videos/001_009_001/frame000073.jpg&#39;,
- &#39;test_videos/001_009_001/frame000067.jpg&#39;,
- &#39;test_videos/001_009_001/frame000098.jpg&#39;,
- &#39;test_videos/001_009_001/frame000099.jpg&#39;,
- &#39;test_videos/001_009_001/frame000066.jpg&#39;,
- &#39;test_videos/001_009_001/frame000072.jpg&#39;,
- &#39;test_videos/001_009_001/frame000112.jpg&#39;,
- &#39;test_videos/001_009_001/frame000106.jpg&#39;,
- &#39;test_videos/001_009_001/frame000029.jpg&#39;,
- &#39;test_videos/001_009_001/frame000015.jpg&#39;,
- &#39;test_videos/001_009_001/frame000001.jpg&#39;,
- &#39;test_videos/001_009_001/frame000000.jpg&#39;,
- &#39;test_videos/001_009_001/frame000014.jpg&#39;,
- &#39;test_videos/001_009_001/frame000028.jpg&#39;,
- &#39;test_videos/001_009_001/frame000002.jpg&#39;,
- &#39;test_videos/001_009_001/frame000016.jpg&#39;,
- &#39;test_videos/001_009_001/frame000017.jpg&#39;,
- &#39;test_videos/001_009_001/frame000003.jpg&#39;,
- &#39;test_videos/001_009_001/frame000007.jpg&#39;,
- &#39;test_videos/001_009_001/frame000013.jpg&#39;,
- &#39;test_videos/001_009_001/frame000012.jpg&#39;,
- &#39;test_videos/001_009_001/frame000006.jpg&#39;,
- &#39;test_videos/001_009_001/frame000010.jpg&#39;,
- &#39;test_videos/001_009_001/frame000004.jpg&#39;,
- &#39;test_videos/001_009_001/frame000038.jpg&#39;,
- &#39;test_videos/001_009_001/frame000039.jpg&#39;,
- &#39;test_videos/001_009_001/frame000005.jpg&#39;,
- &#39;test_videos/001_009_001/frame000011.jpg&#39;]</code></pre>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">gif_images = []</span><br><span class="line"><span class="keyword">for</span> path <span class="keyword">in</span> img_paths:</span><br><span class="line">    gif_images.append(imageio.imread(path))</span><br><span class="line">imageio.mimsave(<span class="string">&quot;test.gif&quot;</span>,gif_images,fps=<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
-
-<h3 id="展示光流变化GIF"><a href="#展示光流变化GIF" class="headerlink" title="展示光流变化GIF"></a>展示光流变化GIF</h3><div style="text-align: center">
-<img src="/提取视频光流数据/001test.gif"/>
+<div style="text-align: center">
+<img src="/手撕BP神经网络/0_C_nYHONjxjUVgIYh.jpg"/>
 </div>
 
+<p><strong>误差反向传播法的推导过程</strong></p>
+<div style="text-align: center">
+<img src="/手撕BP神经网络/ANNphote1.png"/>
+</div>
+<div style="text-align: center">
+<img src="/手撕BP神经网络/ANNphote2.png"/>
+</div>
+<div style="text-align: center">
+<img src="/手撕BP神经网络/ANNphote3.png"/>
+</div>
+<div style="text-align: center">
+<img src="/手撕BP神经网络/ANNphote4.png"/>
+</div>
+<div style="text-align: center">
+<img src="/手撕BP神经网络/ANNphote5.png"/>
+</div>
+<div style="text-align: center">
+<img src="/手撕BP神经网络/ANNphote6.png"/>
+</div>
+<div style="text-align: center">
+<img src="/手撕BP神经网络/ANNphote7.png"/>
+</div>
+<div style="text-align: center">
+<img src="/手撕BP神经网络/ANNphote8.png"/>
+</div>
+<div style="text-align: center">
+<img src="/手撕BP神经网络/ANNphote9.png"/>
+</div>
+<div style="text-align: center">
+<img src="/手撕BP神经网络/ANNphote10.png"/>
+</div>
+<div style="text-align: center">
+<img src="/手撕BP神经网络/ANNphote11.png"/>
+</div>
+<div style="text-align: center">
+<img src="/手撕BP神经网络/ANNphote12.png"/>
+</div>
+<div style="text-align: center">
+<img src="/手撕BP神经网络/ANNphote13.png"/>
+</div>
+<div style="text-align: center">
+<img src="/手撕BP神经网络/ANNphote14.png"/>
+</div>
+<div style="text-align: center">
+<img src="/手撕BP神经网络/ANNphote15.png"/>
+</div>
+<div style="text-align: center">
+<img src="/手撕BP神经网络/ANNphote16.png"/>
+</div>
+<div style="text-align: center">
+<img src="/手撕BP神经网络/ANNphote17.png"/>
+</div>
+<div style="text-align: center">
+<img src="/手撕BP神经网络/backpropagation.png"/>
+</div>
+---
 
+<hr>
+<p><strong>公式推导</strong></p>
+<div style="text-align: center">
+<img src="/手撕BP神经网络/1.jpg"/>
+</div>
+<div style="text-align: center">
+<img src="/手撕BP神经网络/2.jpg"/>
+</div>
+<div style="text-align: center">
+<img src="/手撕BP神经网络/3.jpg"/>
+</div>
+<div style="text-align: center">
+<img src="/手撕BP神经网络/4.jpg"/>
+</div>
+<div style="text-align: center">
+<img src="/手撕BP神经网络/5.jpg"/>
+</div>
+<div style="text-align: center">
+<img src="/手撕BP神经网络/6.jpg"/>
+</div>
+<div style="text-align: center">
+<img src="/手撕BP神经网络/7.jpg"/>
+</div>
+<div style="text-align: center">
+<img src="/手撕BP神经网络/8.jpg"/>
+</div>
+<div style="text-align: center">
+<img src="/手撕BP神经网络/9.jpg"/>
+</div>
+<div style="text-align: center">
+<img src="/手撕BP神经网络/10.jpg"/>
+</div>
+
+<p>手撕源码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#导入所需包</span><br><span class="line">  # encoding: utf-8</span><br><span class="line">import tensorflow as tf</span><br><span class="line">import numpy as np</span><br><span class="line">import seaborn as sns</span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">from sklearn.datasets import make_moons</span><br><span class="line">from sklearn.model_selection import train_test_split</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 产生一个简单的样本数据集，半环形图，类似的有make_circles,环形数据</span><br><span class="line">X, y &#x3D; make_moons(n_samples&#x3D;N_SAMPLES, noise&#x3D;0.2, random_state&#x3D;100)</span><br><span class="line">X_train, X_test, y_train, y_test &#x3D; train_test_split(X, y, test_size&#x3D;TEST_SIZE, random_state&#x3D;42)</span><br><span class="line">print(X.shape, y.shape)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">class Layer:</span><br><span class="line">    # 全连接层网络</span><br><span class="line">    def __init__(self, n_input, n_neurons, activation&#x3D;None, weights&#x3D;None, bias&#x3D;None):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        : int n_input: 输入节点数</span><br><span class="line">        ：int n_neurons: 输出节点数</span><br><span class="line">        ：str activation: 激活函数类型</span><br><span class="line">        : weights: 权值张量，内部生成</span><br><span class="line">        ： bias: 偏置，内部生成</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        # 通过正态分布生成初始化的参数</span><br><span class="line">        self.weights \</span><br><span class="line">            &#x3D; weights if weights is not None else \</span><br><span class="line">            np.random.randn(n_input, n_neurons) * np.sqrt(1&#x2F;n_neurons)</span><br><span class="line">        self.bias \</span><br><span class="line">            &#x3D; bias if bias is not None else \</span><br><span class="line">            np.random.randn(n_neurons) * 0.1</span><br><span class="line">        self.activation &#x3D; activation</span><br><span class="line">        self.last_activation &#x3D; None</span><br><span class="line">        self.error &#x3D; None</span><br><span class="line">        self.delta &#x3D; None</span><br><span class="line"></span><br><span class="line">    # 网络的前向传播</span><br><span class="line">    def activate(self, x):</span><br><span class="line">        r &#x3D; np.dot(x, self.weights) + self.bias  # X@w + b</span><br><span class="line">        self.last_activation &#x3D; self._apply_activation(r)  # 激活函数</span><br><span class="line">        return self.last_activation</span><br><span class="line"></span><br><span class="line">    # 不同类型的激活函数</span><br><span class="line">    def _apply_activation(self, r):</span><br><span class="line">        if self.activation is None:</span><br><span class="line">            return r</span><br><span class="line">        elif self.activation &#x3D;&#x3D; &#39;relu&#39;:</span><br><span class="line">            return np.maximum(r, 0)</span><br><span class="line">        elif self.activation &#x3D;&#x3D; &#39;tanh&#39;:</span><br><span class="line">            return np.tanh(r)</span><br><span class="line">        elif self.activation &#x3D;&#x3D; &#39;sigmoid&#39;:</span><br><span class="line">            return 1 &#x2F; (1 + np.exp(-r))</span><br><span class="line">        return r</span><br><span class="line"></span><br><span class="line">        # 不同类型激活函数的导数实现</span><br><span class="line">    def apply_activation_derivation(self, r):</span><br><span class="line">        if self.activation is None:</span><br><span class="line">            return np.ones_like(r)</span><br><span class="line">        elif self.activation &#x3D;&#x3D; &#39;relu&#39;:</span><br><span class="line">            grad &#x3D; np.array(r, copy&#x3D;True)</span><br><span class="line">            grad[r &gt; 0] &#x3D; 1.</span><br><span class="line">            grad[r &lt;&#x3D; 0] &#x3D; 0.</span><br><span class="line">            return grad</span><br><span class="line">        elif self.activation &#x3D;&#x3D; &#39;tanh&#39;:</span><br><span class="line">             return 1 - r**2</span><br><span class="line">        elif self.activation &#x3D;&#x3D; &#39;sigmoid&#39;:</span><br><span class="line">            return r * (1 - r)</span><br><span class="line">        return r</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"># 神经网络模型</span><br><span class="line">class NeuralNetwork:</span><br><span class="line">    def __init__(self):  # 需要实例化后对属性赋值</span><br><span class="line">        self._layers &#x3D; []  # 网络层对象列表</span><br><span class="line"></span><br><span class="line">    def add_layer(self, layer):  # 追加网络层</span><br><span class="line">        self._layers.append(layer)</span><br><span class="line"></span><br><span class="line">    # 前向传播只需要循环调用各网络层对象的前向计算函数</span><br><span class="line">    def feed_forward(self, X):</span><br><span class="line">        for layer in self._layers:</span><br><span class="line">            X &#x3D; layer.activate(X)</span><br><span class="line">        return X</span><br><span class="line"></span><br><span class="line">    # 网络模型的反向传播</span><br><span class="line">    def backpropagation(self, X, y, learning_rate):</span><br><span class="line">        output &#x3D; self.feed_forward(X)</span><br><span class="line">        # 反向循环</span><br><span class="line">        for i in reversed(range(len(self._layers))):</span><br><span class="line">            layer &#x3D; self._layers[i]  # 得到当前层对象</span><br><span class="line">            if layer &#x3D;&#x3D; self._layers[-1]:  #如果是输出层</span><br><span class="line">                layer.error &#x3D; y - output</span><br><span class="line">                layer.delta &#x3D; layer.error * layer.apply_activation_derivation(output)</span><br><span class="line">            else:  # 计算隐藏层</span><br><span class="line">                next_layer &#x3D; self._layers[i + 1]  # 得到下一层对象</span><br><span class="line">                layer.error &#x3D; np.dot(next_layer.weights, next_layer.delta)  # 矩阵乘法</span><br><span class="line">                layer.delta &#x3D; layer.error *\</span><br><span class="line">                              layer.apply_activation_derivation(layer.last_activation)</span><br><span class="line"></span><br><span class="line">        for i in range(len(self._layers)):</span><br><span class="line">            layer &#x3D; self._layers[i]</span><br><span class="line">            # o_i为上一层网络输出</span><br><span class="line">            o_i &#x3D; np.atleast_2d(X if i &#x3D;&#x3D; 0 else self._layers[i - 1].last_activation)  # 将数据视为2维数据</span><br><span class="line">            layer.weights +&#x3D; layer.delta * o_i.T * learning_rate  # .T是转置</span><br><span class="line"></span><br><span class="line">    # 网络的训练</span><br><span class="line">    def train(self, X_train, X_test, y_train, y_test, learning_rate, max_epochs):</span><br><span class="line">        temp1 &#x3D; y_train.shape[0]</span><br><span class="line">        y_onehot &#x3D; np.zeros((temp1, 2))</span><br><span class="line">        temp2 &#x3D; np.arange(y_train.shape[0])  # 线性 0 - 1399</span><br><span class="line">        y_onehot[temp2, y_train] &#x3D; 1</span><br><span class="line">        mses &#x3D; []</span><br><span class="line">        accuracy &#x3D; []</span><br><span class="line">        for i in range(max_epochs):</span><br><span class="line">            for j in range(len(X_train)):  # 一次训练一个样本</span><br><span class="line">                self.backpropagation(X_train[j], y_onehot[j], learning_rate)</span><br><span class="line">            if i % 10 &#x3D;&#x3D; 0:</span><br><span class="line">                mse &#x3D; np.mean(np.square(y_onehot - self.feed_forward(X_train)))</span><br><span class="line">                mses.append(mse)</span><br><span class="line">                print(&#39;Epoch: #%s, MSE: %f&#39; % (i, float(mse)))</span><br><span class="line">                acc &#x3D; self.accuracy(self.predict(X_test), y_test.flatten())</span><br><span class="line">                print(&#39;Accuracy: %.2f%%&#39; % (acc * 100))</span><br><span class="line">                accuracy.append(acc*100)</span><br><span class="line">        return mses, accuracy</span><br><span class="line"></span><br><span class="line">    def accuracy(self, y_output, y_test):</span><br><span class="line">        return np.mean((np.argmax(y_output, axis&#x3D;1) &#x3D;&#x3D; y_test))</span><br><span class="line"></span><br><span class="line">    def predict(self, X_test):</span><br><span class="line">        return self.feed_forward(X_test)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">#绘图</span><br><span class="line">def make_plot(X, y, plot_name&#x3D;None, XX&#x3D;None, YY&#x3D;None, preds&#x3D;None, dark&#x3D;False):</span><br><span class="line">    if dark:</span><br><span class="line">        plt.style.use(&#39;dark_background&#39;)</span><br><span class="line">    else:</span><br><span class="line">        sns.set_style(&#39;whitegrid&#39;)</span><br><span class="line">    plt.figure(figsize&#x3D;(16, 12))</span><br><span class="line">    axes &#x3D; plt.gca()</span><br><span class="line">    axes.set(xlabel&#x3D;&quot;$x_l$&quot;, ylabel&#x3D;&quot;$x_2$&quot;)</span><br><span class="line">    plt.title(plot_name, fontsize&#x3D;30)</span><br><span class="line">    plt.subplots_adjust(left&#x3D;0.20)  # 调整边距和子图间距，子图的左侧</span><br><span class="line">    plt.subplots_adjust(right&#x3D;0.80)</span><br><span class="line">    if XX is not None and YY is not None and preds is not None:</span><br><span class="line">        plt.contourf(XX, YY, preds.shape(XX.shape), 25, alpha&#x3D;1, cmap&#x3D;plt.cm.Spectral)</span><br><span class="line">        plt.contour(XX, YY, preds.reshape(XX.shape), levels&#x3D;[1.5], cmap&#x3D;&quot;Greys&quot;, vmin&#x3D;0, vmax&#x3D;.6)</span><br><span class="line">    # 根据标签区分颜色</span><br><span class="line">    plt.scatter(X[:, 0], X[:, 1], c&#x3D;y.ravel(), s&#x3D;40, cmap&#x3D;plt.cm.Spectral, edgecolors&#x3D;&#39;none&#39;)</span><br><span class="line"></span><br><span class="line">    plt.savefig(&#39;data_set.png&#39;)</span><br><span class="line">    plt.close()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">make_plot(X, y, &quot;Classification DataSet Visualization&quot;)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># 4层全连接网络 实例化训练和预测</span><br><span class="line">nn &#x3D; NeuralNetwork()  # 实列化网络</span><br><span class="line">nn.add_layer(Layer(2, 25, &#39;sigmoid&#39;))  # 2 --&gt; 25</span><br><span class="line">nn.add_layer(Layer(25, 50, &#39;sigmoid&#39;))  # 25 --&gt; 50</span><br><span class="line">nn.add_layer(Layer(50, 25, &#39;sigmoid&#39;))  # 50 --&gt; 25</span><br><span class="line">nn.add_layer(Layer(25, 2, &#39;sigmoid&#39;))  # 25 --&gt; 2</span><br><span class="line">learning_rate &#x3D; 0.01</span><br><span class="line">max_epochs &#x3D; 1000</span><br><span class="line">mses, accuracy &#x3D; nn.train(X_train, X_test, y_train, y_test, learning_rate, max_epochs)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">plt.figure()</span><br><span class="line">plt.plot(mses, &#39;b&#39;, label&#x3D;&#39;MSE Loss&#39;)</span><br><span class="line">plt.xlabel(&#39;Epoch&#39;)</span><br><span class="line">plt.ylabel(&#39;MSE&#39;)</span><br><span class="line">plt.legend()</span><br><span class="line">plt.savefig(&#39;exam5.2 MSE Loss.png&#39;)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">plt.figure()</span><br><span class="line">plt.plot(accuracy, &#39;r&#39;, label&#x3D;&#39;Accuracy rate&#39;)</span><br><span class="line">plt.xlabel(&#39;Epoch&#39;)</span><br><span class="line">plt.ylabel(&#39;Accuracy&#39;)</span><br><span class="line">plt.legend()</span><br><span class="line">plt.savefig(&#39;exam5.2 Accuracy.png&#39;)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
     
 
     
@@ -616,7 +434,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/%E6%8F%90%E5%8F%96%E8%A7%86%E9%A2%91%E5%85%89%E6%B5%81%E6%95%B0%E6%8D%AE.html" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/%E6%89%8B%E6%92%95BP%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C.html" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -631,9 +449,18 @@
 
 <nav id="article-nav">
   
+    <a href="/%E6%8F%90%E5%8F%96%E8%A7%86%E9%A2%91%E5%85%89%E6%B5%81%E6%95%B0%E6%8D%AE.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          提取视频光流数据
+        
+      </div>
+    </a>
   
-    <a href="/%E6%89%8B%E6%92%95BP%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">手撕BP神经网络</div>
+  
+    <a href="/%E6%B5%8B%E8%AF%95.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">测试</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -660,7 +487,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%A7%86%E9%A2%91%E6%8F%90%E5%8F%96%E6%95%B0%E6%8D%AE%E5%B8%A7"><span class="toc-number">1.</span> <span class="toc-text">1. 视频提取数据帧</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E9%80%9A%E8%BF%87%E8%BF%9E%E7%BB%AD%E5%B8%A7%E6%8F%90%E5%8F%96TVL1%E5%85%89%E6%B5%81"><span class="toc-number">2.</span> <span class="toc-text">2. 通过连续帧提取TVL1光流</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%8F%AF%E8%A7%86%E5%8C%96%E5%85%89%E6%B5%81"><span class="toc-number">3.</span> <span class="toc-text">3.可视化光流</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%88%B6%E4%BD%9C%E8%A7%86%E9%A2%91"><span class="toc-number">4.</span> <span class="toc-text">4.制作视频</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%88%B6%E4%BD%9CGIF"><span class="toc-number">5.</span> <span class="toc-text">5. 制作GIF</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%95%E7%A4%BA%E5%85%89%E6%B5%81%E5%8F%98%E5%8C%96GIF"><span class="toc-number">6.</span> <span class="toc-text">展示光流变化GIF</span></a></li></ol>
+                    目录，不存在的…
                     </div>
                 </span>
             </div>
